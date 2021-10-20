@@ -109,7 +109,7 @@ $userd = $admin->show_users();
 
 
       <div class="col-md-4 mt-3 ">
-        <div class="card shadow " style="width: 18rem; box-shadow: 1px 1px 1px 1px #e1dbdb; border-radius:0px; border-top-left-radius: 0px; cursor:pointer;">
+        <div class="card shadow bg-dark " style="width: 18rem; box-shadow: 1px 1px 1px 1px #e1dbdb; border-radius:0px; border-top-left-radius: 0px; cursor:pointer;">
           <!-- <div class="card-header">
                 Your Courses
               </div> -->
@@ -125,7 +125,7 @@ $userd = $admin->show_users();
 
 
       <div class="col-md-4 mt-3">
-        <div class="card shadow" style="width: 18rem;cursor:pointer; box-shadow:1px 1px 1px 1px #e1dbdb; border-radius:0px; border-top-left-radius: 0px;">
+        <div class="card shadow bg-dark" style="width: 18rem;cursor:pointer; box-shadow:1px 1px 1px 1px #e1dbdb; border-radius:0px; border-top-left-radius: 0px;">
           <!-- <div class="card-header">
                 Your Courses
               </div> -->
@@ -139,7 +139,7 @@ $userd = $admin->show_users();
 
       </div>
       <div class="col-md-4 mt-3 ">
-        <div class="card shadow" style="width: 18rem;cursor:pointer; box-shadow:1px 1px 1px 1px #e1dbdb; border-radius:0px; border-top-left-radius: 0px;">
+        <div class="card shadow bg-dark" style="width: 18rem;cursor:pointer; box-shadow:1px 1px 1px 1px #e1dbdb; border-radius:0px; border-top-left-radius: 0px;">
           <!-- <div class="card-header">
                 Your Courses
               </div> -->
