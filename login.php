@@ -6,6 +6,7 @@ session_start();
 
 <!DOCTYPE html>
 <html>
+
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Aleo" rel="stylesheet">
 
@@ -19,11 +20,11 @@ session_start();
 
 	<!----font-awsome ends-->
 
-		<!----css file link-->
-	
+	<!----css file link-->
+
 	<link rel="stylesheet" type="text/css" href="css/login.css">
 
-	   <!----favicon setting-->
+	<!----favicon setting-->
 	<link rel="shortcut icon" type="text/css" href="img/mylogo.png">
 
 	<!-- Latest compiled and minified CSS -->
@@ -38,7 +39,7 @@ session_start();
 	<!-- Google Client id to integrate google signin-->
 
 	<meta name="google-signin-client_id" content="808976312783-k901nr0n50did222qa275k0umvn4rpi1.apps.googleusercontent.com">
-	
+
 
 	<!-- Google JavaScript file to integrate google signin-->
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
@@ -49,13 +50,14 @@ session_start();
 
 	<!----------email notification-------->
 
-<script type="text/css">
-	
-</script>
+	<script type="text/css">
+
+	</script>
 
 </head>
+
 <body>
-			<!---Navigation Starts	----->
+	<!---Navigation Starts	----->
 
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
@@ -72,55 +74,54 @@ session_start();
 				<h1 style="color: white;margin-top: 10px;" id="myhead">Jobify</h1>
 			</div>
 			<div class="collapse navbar-collapse" id="navi">
-                 <!------Navigation menus starts---->
+				<!------Navigation menus starts---->
 				<ul class="nav navbar-nav navbar-right">
 					<li> <a href="">Home</a></li>
 					<li> <a href="">Our Service</a></li>
 					<li> <a href="">Works</a></li>
 					<li> <a href="">Team</a></li>
 					<li> <a href="">About</a></li>
-					<li> <a href="">Carrier</a></li>
 					<li> <a href="" id="our-location" class="btn-success" data-target="#mymodal" data-toggle="modal">Login</a></li>
 				</ul>
-	                 <!------Navigation menus ends---->
+				<!------Navigation menus ends---->
 			</div>
 		</div>
 	</nav>
-			<!---Navigation Ends	----->
+	<!---Navigation Ends	----->
 
-			<!---Slider Section starts	------->
-			<section class="slider text-center" id="slider">
-				<div class="modal-dialog ">
-					<div class="modal-content">
-						<h3 id="login-heading">Login</h3>
-						
-					<div class="modal-body" >
-						<div class="left-box">
+	<!---Slider Section starts	------->
+	<section class="slider text-center" id="slider">
+		<div class="modal-dialog ">
+			<div class="modal-content">
+				<h3 id="login-heading">Login</h3>
+
+				<div class="modal-body">
+					<div class="left-box">
 						<form method="POST" action="validation.php" onsubmit="return validation()">
 							<div class="form-group">
 								<label><i class="fa fa-user fa-2x"></i> Username</label>
 								<input type="text" autocomplete="off" name="name" class="form-control" id="username" onkeypress="clear()">
-							
+
 
 								<label><i class="fa fa-lock fa-2x"></i> Password</label>
 								<input type="password" autocomplete="off" name="password" class="form-control" id="password">
 
-								<span id="perror"><?php 
-								if(isset($_SESSION['error']))
-								{
-									echo "Error: Incorrect Username or Password, Try Again";
-								} 
-								else{ echo " ";} 
-								?>
+								<span id="perror"><?php
+													if (isset($_SESSION['error'])) {
+														echo "Error: Incorrect Username or Password, Try Again";
+													} else {
+														echo " ";
+													}
+													?>
 
 								</span>
 								<button id="btn-login" type="submit">Login</button>
-								
+
 							</div>
 							<div class="register">
 								<h2>Not Our User?&nbsp<span id="btn-login create-account"><a href="signup.html"> Sign Up</span></a> </h2>
 							</div>
-							
+
 						</form>
 					</div>
 					<div class="right-box">
@@ -132,41 +133,39 @@ session_start();
 						<button class="social google">Log in with Google</button>
 						<!-- <button type="submit" class="social google g-signin2" data-onsuccess="onSignIn()">Log in with gmail</button> -->
 					</div>
-					</div>
 				</div>
 			</div>
-			</section>
-			
-
-			<!---Slider Section ends------->
-
-			<!---confirm password validation Start------->
-
-<script type="text/javascript">
-	
-function validation() {
-	var username=document.getElementById('username').value;
-	var password=document.getElementById('password').value;
-
-	if ((username=="") ||( password==""))
-	 {
-	 	document.getElementById('perror').innerHTML="Error: Please Fill out the Details";
-	 	return false;
-	 }
-}
+		</div>
+	</section>
 
 
-function clear() {
-	document.getElementById('perror').innerHTML="ksdfisdhfg";
-}
+	<!---Slider Section ends------->
 
-</script>
-         <!---confirm password validation end------->
+	<!---confirm password validation Start------->
 
-       
+	<script type="text/javascript">
+		function validation() {
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
 
-<script src="js/jquery.ripples-min.js" type="text/javascript"></script>
-<script src="js/typed.min.js" type="text/javascript"></script>
+			if ((username == "") || (password == "")) {
+				document.getElementById('perror').innerHTML = "Error: Please Fill out the Details";
+				return false;
+			}
+		}
+
+
+		function clear() {
+			document.getElementById('perror').innerHTML = "ksdfisdhfg";
+		}
+	</script>
+	<!---confirm password validation end------->
+
+
+
+	<script src="js/jquery.ripples-min.js" type="text/javascript"></script>
+	<script src="js/typed.min.js" type="text/javascript"></script>
 
 </body>
+
 </html>
