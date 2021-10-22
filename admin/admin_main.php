@@ -62,7 +62,8 @@ $userd = $admin->show_users();
       /* Chrome 10-25, Safari 5.1-6 */
       background: linear-gradient(to right, #F3A183, #EC6F66);
       /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      border: solid 4px saddlebrown;
+      border: 5px solid black;
+
     }
 
     .card {
@@ -147,7 +148,7 @@ $userd = $admin->show_users();
 
           <img class="" src="../uploads/file5.png" alt="Card" width="288" height="200">
           <div class="card-body">
-            <p class="card-text "><a href="#" style="text-decoration: none; color: orangered">All QUIZZES</a><i class="fa fa-question-circle ml-3" style="color: orangered"></i></p>
+            <p class="card-text "><a href="manage_quiz/manage_quiz.php" style="text-decoration: none; color: orangered">All QUIZZES</a><i class="fa fa-question-circle ml-3" style="color: orangered"></i></p>
           </div>
         </div>
 
@@ -177,8 +178,8 @@ $userd = $admin->show_users();
               <td class="mytable2">
                 <div class="card shadow border-0" style="width: 15rem; height: 110px; box-shadow: 2px 2px #827171; border-radius:0px; border-top-left-radius: 0px;">
 
-                  <div class="card-body">
-                    <p class="card-text text-white"><b class="h1-LIST">No. Of Videos</b><br><span style="font-size: 20px;"><?php $admin->display_video_count(); ?></span></p>
+                  <div class="card-body ">
+                    <p class="card-text text-white "><b class="h1-LIST">No. Of Videos</b><br><span style="font-size: 20px;"><?php $admin->display_video_count(); ?></span></p>
                   </div>
 
               </td>
@@ -218,14 +219,14 @@ $userd = $admin->show_users();
 
           <!-- table stsrts  -->
           <!--  use table-responsive class -->
-          <p class="ml-5  "><b class="h1-LIST">List of Users </b><br><span style="font-size: 40px;"></p>
+          <p class="ml-5  "><b class="h1-LIST">List of Users: </b><br><span style="font-size: 40px;"></p>
           <thead>
             <tr>
 
-              <th scope="col">id</th>
+              <th scope="col">ID</th>
               <th scope="col">Username</th>
               <th scope="col">Password</th>
-              <th scope="col">email id</th>
+              <th scope="col">Email:</th>
             </tr>
           </thead>
           <tbody style="">
@@ -251,38 +252,12 @@ $userd = $admin->show_users();
 
 
       </div> <!-- list of users ends -->
-
-
-
-
-
-
     </div> <!--  second row closed -->
-
-
-
-
     <!--   third row starts -->
-
-
-
-
 
   </div>
 
-
-
-
   <!-- sidebar starts -->
-
-
-
-
-
-
-
-
-
 
   <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -78,8 +78,8 @@
       <div class="col-md-10 ">
         <!--  main body content starts -->
         <div>
-          <h3 class="text-center mt-2">Manage Your <?php echo $_GET['course_name'];  ?> &nbsp online video tutorial</h3>
-          <button class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">add new video</button><br>
+          <h3 class="text-center mt-2">Manage Your <strong><?php echo $_GET['course_name'];  ?></strong>&nbspOnline Video Tutorials</h3>
+          <button class="btn btn-primary float-right" data-toggle="modal" data-target="#myModal">Add New Video</button><br>
         </div>
         <div class="row col-md-12 ml-2 shadow">
 
@@ -102,7 +102,7 @@
               <div class="card shadow mycard" style="width: 18rem; height: 7rem;">
                 <div class="inner">
                   <!--  to zoom in and zoom out effect -->
-                  <img class="card-img-top " style="height: 11rem;" src=<?php echo $row['video_image']; ?> alt="Card image cap">
+                  <img class="card-img-top " style="height: 11rem;" src=<?php echo $row['video_image']; ?> alt="Card Image">
                 </div>
 
                 <div class="card-body shadow" style="background-color: #f1f1f1;">
@@ -111,11 +111,11 @@
 
 
                   <span class="text-danger" style="font-size: 14px; ">
-                    <a href="watch_video.php?video_id=<?php echo $row['video_id'] ?>&course_name=<?php echo $row['course_name'] ?>" class="text-success p-1" style="text-decoration: none;">watch <i class="fa fa-eye"></i></a>
+                    <a href="watch_video.php?video_id=<?php echo $row['video_id'] ?>&course_name=<?php echo $row['course_name'] ?>" class="text-success p-1" style="text-decoration: none;">Watch <i class="fa fa-eye"></i></a>
 
-                    <a href="" class="p-1 text-primary" style="text-decoration: none;">update<i class="fa fa-pencil ml-1"></i></a>
+                    <a href="" class="p-1 text-primary" style="text-decoration: none;">Edit<i class="fa fa-pencil ml-1"></i></a>
 
-                    <a href="video_add.php?id=<?php echo $row['video_id'] ?>&course_name=<?php echo $row['course_name'] ?>&run=delete" class="p-1 text-danger" name="delete_vid" style="text-decoration: none;">delete<i class="fa fa-trash-o ml-1"></i></a>
+                    <a href="video_add.php?id=<?php echo $row['video_id'] ?>&course_name=<?php echo $row['course_name'] ?>&run=delete" class="p-1 text-danger" name="delete_vid" style="text-decoration: none;">Delete<i class="fa fa-trash-o ml-1"></i></a>
                   </span>
                 </div>
               </div>

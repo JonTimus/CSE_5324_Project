@@ -6,7 +6,7 @@ session_start();
 
 	
 		 $id=$_POST['txt1'];
-		echo "hello sunil";
+		echo "hello jon";
 		$q="select * from courses where id=$id";
 		$result=mysqli_query($con,$q);
 		$res=mysqli_fetch_array($result); 

@@ -1,101 +1,5 @@
-
-
-<style type="text/css">
-
-.commentdiv
-{	
-	height: 170px;
-	width: 760px;
-	border:1px #d2c8c8 solid;
-	margin-bottom: 50px;
-	position: relative;
-}
-
-textarea
-{	
-	
-	margin-right: 20px;
-	margin-top: 50px;
-	width: 600px;
-	height: 70px;
-}
-
-.commentbtn
-{
-	height: 30px;
-	width: 100px;
-	border: none;
-	color: #fff;
-	margin-left: 20px;
-	background-color: deepskyblue;
-}
-
-.comment-box
-{
-	width: 760px;
-	padding: 20px;
-	background-color: #fff;
-	border-radius: 4px;
-	margin-bottom: 4px;
-	position: relative;
-}
-
-.comment-box p
-{
-	font-family:arial;
-	font-size: 14px;
-	line-height: 16px;
-
-}
-
-.delete-form
-{
-	position: absolute;
-	top:0px;
-	right:10px;
-}
-
-.delete-form Button
-{
-	width: 40px;
-	height: 20px;
-	color:#282828;
-	background-color: #fff;
-	opacity: 0.7;
-	border:none;
-}
-
-.delete-form Button:hover
-{
-	opacity: 1px;
-}
-
-.btnEdit
-{
-	position: absolute !important;
-	top:0px !important;
-	right:120px !important;
-	width: 40px;
-	height: 20px;
-	color:#282828;
-	background-color: #fff;
-	opacity: 0.7;
-	border:none;
-}
-
-.btnEdit:hover
-{
-	opacity: 1px;
-	cursor: pointer;
-
-}
-
-
-</style>
-
-
 <?php 
-$GLOBALS['username'] = "admin";
+
 function setComments($con)
 {
 	
@@ -103,7 +7,7 @@ function setComments($con)
 	 {
 		 // $uid=$_POST['uid'];
 	 	$video_id=$_POST['vid'];
-	 	$uid='admin';
+	 	$uid=$_SESSION['username'];
 		 $date=$_POST['date'];
 		 $message=$_POST['message'];
 
@@ -111,13 +15,12 @@ function setComments($con)
 		 // or $result=$con->query($sql);
 		 $r=mysqli_query($con,$sql);
 		   // do not resubmit the form 
-		
+
 	 }
 }	
 
 function getComments($con)
 {
-	$username="admin";
 	$video_id=$_SESSION['vid'];
 	$sql="SELECT * FROM commentsection where video_id='$video_id'";
 	$result=mysqli_query($con,$sql);
@@ -128,9 +31,11 @@ function getComments($con)
 			echo nl2br($row['message']);  //converts nl tags into br tags for line breaks
 		echo "</p>";
 
+		if ($_SESSION['username']==$row['uid']) 
+		{
 			echo "<form class='delete-form' method='POST' action='".deleteComment($con)."'>
 			<input type='hidden' name='cid' value='".$row['cid']."'>
-			<button type='submit' name='CommentDelete' class='btndelete'>Delete</button> 
+			<button type='submit' name='CommentDelete'>Delete</button> 
 			</form>";
 			$_SESSION['id']=$row['cid'];
 
@@ -138,7 +43,9 @@ function getComments($con)
 
 			echo "
 			<input type='hidden' name='cid' value='".$row['cid']."'>
-			<button type='button' class='btnEdit'  data-toggle='modal' data-target='#myModal' >edit</button> 
+			<button type='button' class='btnEdit'  data-toggle='modal' data-target='#myModal' style='position: absolute !important;
+	top:0px !important;
+	right:120px !important;'>edit</button> 
 			";
 
 
@@ -158,14 +65,14 @@ echo '
       <div class="modal-body">
        
 
- 		<form action="'.editComment($con).'" method="POST">
+ <form action="'.editComment($con).'" method="POST">
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Recipient:</label>
             <input type="text" name="cid" class="form-control" id="recipient-name" value="'.$_SESSION['id'].'">
           </div>
           <div class="form-group" style="padding:-20px;">
             <label for="message-text" class="col-form-label" >Message:</label>
-            <textarea class="form-control" id="message-text" name="message" value="Jon">'.$row['message'].'</textarea>
+            <textarea class="form-control" id="message-text" name="message" value="jon">'.$row['message'].'</textarea>
           </div>
         
 
@@ -188,7 +95,7 @@ echo '
 
 
 
-		
+		}
 		
 		echo "</div>";
 	}
