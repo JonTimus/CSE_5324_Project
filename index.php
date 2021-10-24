@@ -5,15 +5,10 @@ session_start();
 
 if (!isset($_SESSION['username'])) {
 	header('location:login.php');
-	# code...
+	# write your code here...
 
 }
-
-
-
 ?>
-
-
 <!DOCTYPE html>
 <html>
 
@@ -46,7 +41,7 @@ if (!isset($_SESSION['username'])) {
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
 	<!-- jQuery library -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -59,6 +54,7 @@ if (!isset($_SESSION['username'])) {
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"></script>
 
 	<!----------email notification-------->
 
@@ -70,9 +66,74 @@ if (!isset($_SESSION['username'])) {
 	<style type="text/css">
 		.servicebody {}
 
+		
+		body {
+			font-family: Arial, Helvetica, sans-serif
+		}
+
+		h1 {
+			margin-bottom: 40px
+		}
+
+		label {
+			color: black
+		}
+
+		.btn-send {
+			font-weight: 300;
+			text-transform: uppercase;
+			letter-spacing: 0.2em;
+			width: 60%;
+			margin-left: 3px
+		}
+
+		.help-block.with-errors {
+			color: #ff5050;
+			margin-top: 5px
+		}
+
+		.card {
+			margin-left: 10px;
+			margin-right: 10px
+		}
 
 		html {
 			scroll-behavior: smooth;
+		}
+
+		.slider {
+			width: 100%;
+			height: 100vh;
+			background-image: url("img_m/home.png");
+			background-size: cover;
+			background-position: center;
+		}
+
+		.slider-overlay {
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.6);
+		}
+
+		.slider-content {
+
+			color: white;
+			position: absolute;
+			top: 30%;
+			width: 100%;
+
+		}
+
+		.icons .fa {
+			font-size: 40px;
+			margin-right: 7px;
+		}
+
+		.sub-heading {
+			font-family: 'Courier New', Courier, monospace;
+			font-size: x-large;
+			font-weight: 600;
+			text-shadow: #ff5050;
 		}
 	</style>
 
@@ -88,7 +149,7 @@ if (!isset($_SESSION['username'])) {
 
 	<!---Navigation Starts	----->
 
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
 				<!------Responsive Button---->
@@ -105,12 +166,11 @@ if (!isset($_SESSION['username'])) {
 			<div class="collapse navbar-collapse" id="navi">
 				<!------Navigation menus starts---->
 				<ul class="nav navbar-nav navbar-right">
-					<li> <a href="">Home</a></li>
+					<li> <a href="#">Home</a></li>
 					<li> <a href="#myservice_section">Our Service</a></li>
-					<li> <a href="#work">Works</a></li>
-					<li> <a href="#our-members">Team</a></li>
+					<li> <a href="#work">Learn</a></li>
+					<li> <a href="#our-members">Our Team</a></li>
 					<li> <a href="#myfaq">FAQs</a></li>
-					<li> <a href="">Carrier</a></li>
 					<li> <a href="logout.php" id="our-location" class="btn-success"><?php echo $_SESSION['username'];   ?></a></li>
 				</ul>
 				<!------Navigation menus ends---->
@@ -120,11 +180,10 @@ if (!isset($_SESSION['username'])) {
 	<!---Navigation Ends	----->
 
 	<!---Slider Section starts	------->
-	<section class="slider text-center" id="slider">
+	<section class="slider text-center " id="slider">
 		<div class="slider-overlay">
 			<div class="slider-content">
 				<div class="icons">
-
 					<i class="fa fa-apple"></i>
 					<i class="fa fa-android"></i>
 					<i class="fa fa-windows"></i>
@@ -135,18 +194,9 @@ if (!isset($_SESSION['username'])) {
 
 				</div>
 				<div class="cta-div">
-					<a href="#myfaq" class="btn1">QUESTIONS?</a>
+					<a href="#contactus" class="btn1">CONTACT US</a>
 					<a href="#myservice_section" class="btn2">LEARN TODAY</a>
 				</div>
-				<br><br>
-				<!-- <div class="social-networks">
-								<a href="https://www.facebook.com/Unique-Developer-282626055790378/?modal=admin_todo_tour" class="fa fa-facebook"></a>
-								<a href="https://twitter.com/SunilYa35862617" class="fa fa-twitter"></a>
-								<a href="https://www.instagram.com/unique_developer" class="fa fa-instagram"></a>
-								<a href="" class="fa fa-reddit"></a>
-								<a href="https://www.linkedin.com/in/sunil-yadav-70b3bb181/" class="fa fa-linkedin"></a>
-								<a href="" class="fa fa-cog"></a>
-							</div> -->
 			</div>
 		</div>
 	</section>
@@ -164,16 +214,16 @@ if (!isset($_SESSION['username'])) {
 					<div class="left-box">
 						<form method="POST" action="validation.php">
 							<div class="form-group">
-								<label><i class="fa fa-user fa-2x"></i>Username :</label>
+								<label><i class="fa fa-user fa-2x"></i>Username</label>
 								<input type="text" name="name" class="form-control">
 
-								<label><i class="fa fa-lock fa-2x"></i>Password :</label>
+								<label><i class="fa fa-lock fa-2x"></i>Password</label>
 								<input type="password" name="password" class="form-control">
 								<button id="btn-login" type="submit">Login</button>
 
 							</div>
 							<div class="register">
-								<h2>Don't have an account?&nbsp<span id="create-account"><a href="signup.html">Create</span></a> </h2>
+								<h2>Don't have an account?&nbsp<span id="create-account"><a href="signup.html"> Sign Up</span></a> </h2>
 							</div>
 
 						</form>
@@ -205,7 +255,7 @@ if (!isset($_SESSION['username'])) {
 					<div class="section-title text-center">
 						<h2><b>SERVICES</b></h2>
 						<p>
-							this is our serices theses are the services provided by us <br>this are the services provided by us
+							Here you will find all resources you need in your learning journey.
 						</p>
 					</div>
 				</div>
@@ -216,10 +266,9 @@ if (!isset($_SESSION['username'])) {
 						<div class="service-icon">
 							<i class="fa fa-leaf"></i>
 						</div>
-						<h3><a href="programmingdemo.php">PROGRAMMING</a></h3>
+						<h3><a href="programming_articles.php">PROGRAMMING ARTICLES</a></h3>
 						<p>
-							Here you will find all the lecture tutorials related to programming languages
-							like JAVA,PYTHON,ANDROID etc
+							Find all lecture materials like articles.
 						</p>
 					</div>
 				</div>
@@ -229,10 +278,9 @@ if (!isset($_SESSION['username'])) {
 						<div class="service-icon">
 							<i class="fa fa-laptop"></i>
 						</div>
-						<h3><a href="video tutorials\java\display_video_courses.php">VIDEO TUTORIALS</a></h3>
+						<h3><a href="video_tutorials\java\display_video_courses.php">VIDEO LECTURES</a></h3>
 						<p>
-							Here you will find all the videos tutorials related to programming languages
-							like JAVA,PYTHON,ANDROID etc
+							Find all video lectures for programming lectures.
 						</p>
 					</div>
 				</div>
@@ -240,75 +288,29 @@ if (!isset($_SESSION['username'])) {
 				<div class="col-md-4 col-sm-6 col-xs-12">
 					<div class="service-wrap text-center">
 						<div class="service-icon">
-							<i class="fa fa-laptop"></i>
+							<i class="fa fa-question"></i>
 						</div>
-						<h3><a href="online_quize/quizhome.php">EXERCISE</a></h3> <!--  exercise/exercise.php -->
+						<h3><a href="online_quizzes/quizhome.php">Quizzes</a></h3> <!--  exercise/exercise.php -->
 						<p>
-							Here you will find problem programs for practice and their implementation also which will improve your coding skill
+							Find all necessary practice questions and quizzes.
 						</p>
 					</div>
 				</div>
-				<!-- 
-         		<div class="col-md-4 col-sm-6 col-xs-12">
-         			<div class="service-wrap text-center">
-         				<div class="service-icon">
-         					<i class="fa fa-laptop"></i>
-         				</div>
-         				<h3><a href="">WEB DESIGN</a></h3>
-         				<p>
-         					this is our serices theses are the services provided by us <br>this are the services provided by us
-         				</p>
-         			</div>
-         		</div>
- -->
-				<!-- <div class="col-md-4 col-sm-6 col-xs-12">
-         			<div class="service-wrap text-center">
-         				<div class="service-icon">
-         					<i class="fa fa-laptop"></i>
-         				</div>
-         				<h3><a href="">COMPUTER SCIENCE</a></h3>
-         				<p>
-         					this is our serices theses are the services provided by us <br>this are the services provided by us
-         				</p>
-         			</div>
-         		</div>
- -->
-				<!-- <div class="col-md-4 col-sm-6 col-xs-12">
-         			<div class="service-wrap text-center">
-         				<div class="service-icon">
-         					<i class="fa fa-user"></i>
-         				</div>
-         				<h3><a href="">TECH NEWS</a></h3>
-         				<p>
-         					this is our serices theses are the services provided by us <br>this are the services provided by us
-         				</p>
-         			</div>
-         		</div> -->
+				
 			</div>
 		</div>
 	</div>
 
-	<!---Our Services Section Ends------->
-
-	<!---Emailnotification Section Start------->
-
-
-
-	<!---Emailnotification Section Start------->
-
-
-	<!---Our Services Section Ends------->
-
 	<section class="work" id="work"><br>
-		<h2 id="work-heading" class="text-center" style="font-weight: bold;">OUR WORK</h2>
-		<p class="text-center">join us to improve your works join us to improve your works</p>
+		<h2 id="work-heading" class="text-center" style="font-weight: bold;">Programming Tutorials & Quizzes</h2>
+		<p class="text-center">Learn & Practics</p>
 		<div class="container-fluid">
 			<!---first row start-->
 			<div class="row no-gutters">
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="img-wrapper">
-						<a href="img/work1.png" title="this is a sky image">
-							<img src="img/work1.png" class="img-responsive">
+						<a href="./img_m/work1.png" title="Tutorials Photo">
+							<img src="./img_m/work1.png" class="img-responsive">
 						</a>
 
 					</div>
@@ -317,8 +319,8 @@ if (!isset($_SESSION['username'])) {
 
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="img-wrapper">
-						<a href="img/work2.png" title="this is a sky image">
-							<img src="img/work2.png" class="img-responsive">
+						<a href="./img_m/work2.png" title="Tutorials Photo">
+							<img src="./img_m/work2.png" class="img-responsive">
 						</a>
 
 					</div>
@@ -327,8 +329,8 @@ if (!isset($_SESSION['username'])) {
 
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="img-wrapper">
-						<a href="img/work3.png" title="this is a sky image">
-							<img src="img/work3.png" class="img-responsive">
+						<a href="./img_m/work3.png" title="Tutorials Photo">
+							<img src="./img_m/work3.png" class="img-responsive">
 						</a>
 
 					</div>
@@ -337,8 +339,8 @@ if (!isset($_SESSION['username'])) {
 
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="img-wrapper">
-						<a href="img/work4.png" title="this is a sky image">
-							<img src="img/work4.png" class="img-responsive">
+						<a href="./img_m/work4.png" title="Tutorials Photo">
+							<img src="./img_m/work4.png" class="img-responsive">
 						</a>
 
 					</div>
@@ -354,8 +356,8 @@ if (!isset($_SESSION['username'])) {
 
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="img-wrapper">
-						<a href="img/work5.png" title="this is a sky image">
-							<img src="img/work5.png" class="img-responsive">
+						<a href="./img_m/work5.png" title="Tutorials Photo">
+							<img src="./img_m/work5.png" class="img-responsive">
 						</a>
 
 					</div>
@@ -364,8 +366,8 @@ if (!isset($_SESSION['username'])) {
 
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="img-wrapper">
-						<a href="img/work6.png" title="this is a sky image">
-							<img src="img/work6.png" class="img-responsive">
+						<a href="./img_m/work6.png" title="Tutorials Photo">
+							<img src="./img_m/work6.png" class="img-responsive">
 						</a>
 
 					</div>
@@ -374,8 +376,8 @@ if (!isset($_SESSION['username'])) {
 
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="img-wrapper">
-						<a href="img/work7.png" title="this is a sky image">
-							<img src="img/work7.png" class="img-responsive">
+						<a href="./img_m/work7.png" title="Tutorials Photo">
+							<img src="./img_m/work7.png" class="img-responsive">
 						</a>
 
 					</div>
@@ -384,8 +386,8 @@ if (!isset($_SESSION['username'])) {
 
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="img-wrapper">
-						<a href="img/work8.png" title="this is a sky image">
-							<img src="img/work8.png" class="img-responsive">
+						<a href="./img_m/work8.png" title="Tutorials Photo">
+							<img src="./img_m/work8.png" class="img-responsive">
 						</a>
 
 					</div>
@@ -402,74 +404,31 @@ if (!isset($_SESSION['username'])) {
 
 	</section>
 
-	<!---Our Services Section Ends------->
-
-	<!-- introduction video section starts -->
-
-	<!-- 	<br><br><br><br>
-
-		<section class="header7 cid-rjrjygOfd1" id="header7-3">
-
-    
-		    <div class="container">
-		        <div class="media-container-row">
-
-		            <div class="media-content align-right">
-		                <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1">
-		                    Intro with Video
-		                </h1>
-		                <div class="mbr-section-text mbr-white pb-3">
-		                    <p class="mbr-text mbr-fonts-style display-5">
-		                        Intro with background color, paddings and a video on the right. Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface.
-		                    </p>
-		                </div>
-		                <div class="mbr-section-btn">
-		                        <a class="btn btn-md btn-primary display-4" href="https://mobirise.co">LEARN MORE</a>
-		                        <a class="btn btn-md btn-white-outline display-4" href="https://mobirise.co">LIVE DEMO</a>
-		                </div>
-		            </div>
-
-		            <div class="mbr-figure" style="width: 100%;"><iframe class="mbr-embedded-video" src="https://www.youtube.com/embed/uNCr7NdOJgw?rel=0&amp;amp;showinfo=0&amp;autoplay=0&amp;loop=0" width="1280" height="720" frameborder="0" allowfullscreen></iframe></div>
-
-		        </div>
-    	</div>
-		</section> -->
-
-
-
-
-	<!-- introduction video section ends -->
-
-
-
-
-
 
 
 
 	<!---Our Team Section Start------->
 	<br><br><br>
 	<div class="container text-center" id="our-members">
-		<h2><b>MEMBERS</b></h2>
-		<p>
-			These are our excellent member .you can contact anyone anytime <br> and all are experts and well experience
+		<h2><b>OUR TEAM</b></h2>
+		<p class="sub-heading">
+			Reach out with any questions and we will try to answer them as quickly as possible.
 		</p>
 	</div>
 
 
 	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
+		<div class="row m-5">
+			<div class="col-md-12 m-5">
 				<div id="team-memebers" class="owl-carousel owl-theme">
-					<!---memeber 1 ------->
 					<div class="team-member text-center">
-						<img src="img/11.png" class="img-responsive">
+						<img src="img_m/jon.jpg" style="height: 350px;width: 290px;" class="img-responsive">
 						<div class="team-member-info text-center">
-							<h4 class="team-member-name">jon</h4>
-							<h4 class="team-member-designation">Team lead & Developer</h4>
+							<h4 class="team-member-name">Akhmadjon Muslimov</h4>
+							<h4 class="team-member-designation">Team Lead & Developer</h4>
 							<ul class="social-list">
-								<li><a href="https://www.facebook.com/profile.php?id=100004910078558" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="https://twitter.com/SunilYa35862617" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
@@ -477,9 +436,9 @@ if (!isset($_SESSION['username'])) {
 
 
 					<div class="team-member text-center">
-						<img src="img/11.png" class="img-responsive">
+						<img src="img_m/nudrat.jpg" style="height: 350px;width: 290px;" class="img-responsive">
 						<div class="team-member-info text-center">
-							<h4 class="team-member-name">Harsh</h4>
+							<h4 class="team-member-name">Nudrat Nawal</h4>
 							<h4 class="team-member-designation">Developer</h4>
 							<ul class="social-list">
 								<li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
@@ -491,9 +450,9 @@ if (!isset($_SESSION['username'])) {
 
 
 					<div class="team-member text-center">
-						<img src="img/11.png" class="img-responsive">
+						<img src="img_m/Feng.jpeg" style="height: 350px;width: 290px;" class="img-responsive">
 						<div class="team-member-info text-center">
-							<h4 class="team-member-name">Feng</h4>
+							<h4 class="team-member-name">Jiang Feng</h4>
 							<h4 class="team-member-designation">Developer</h4>
 							<ul class="social-list">
 								<li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
@@ -505,9 +464,9 @@ if (!isset($_SESSION['username'])) {
 
 
 					<div class="team-member text-center">
-						<img src="img/11.png" class="img-responsive">
+						<img src="img_m/rahul.jpeg" style="height: 350px;width: 290px;" class="img-responsive">
 						<div class="team-member-info text-center">
-							<h4 class="team-member-name">Nudrat</h4>
+							<h4 class="team-member-name">Rahul Shirolkar</h4>
 							<h4 class="team-member-designation">Developer</h4>
 							<ul class="social-list">
 								<li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
@@ -519,9 +478,9 @@ if (!isset($_SESSION['username'])) {
 
 
 					<div class="team-member text-center">
-						<img src="img/11.png" class="img-responsive">
+						<img src="img_m/harsh.jpg" style="height: 350px;width: 290px;" class="img-responsive">
 						<div class="team-member-info text-center">
-							<h4 class="team-member-name">Rahul</h4>
+							<h4 class="team-member-name">Harsh Antwani</h4>
 							<h4 class="team-member-designation">Developer</h4>
 							<ul class="social-list">
 								<li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
@@ -530,14 +489,6 @@ if (!isset($_SESSION['username'])) {
 							</ul>
 						</div>
 					</div>
-
-
-
-
-
-
-
-
 
 				</div>
 			</div>
@@ -560,10 +511,10 @@ if (!isset($_SESSION['username'])) {
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 text-center">
-					<h2><b>GENERAL FAQs</b></h2>
+					<h2><b>FAQs</b></h2>
 					<div class="sub-heading">
 						<p>
-							you can ask the regarding the issues.we will <br>solve that together for sure
+							Commonly Asked Questions
 						</p>
 
 					</div>
@@ -613,29 +564,25 @@ if (!isset($_SESSION['username'])) {
 						<div class="panel panel-default">
 							<div class="panel-heading" id="headingTwo">
 								<h4 class="panel-title">
-									<a href="#collapseTwo" class="collapsed" data-toggle="collapse" data-parent="#accordian">How does it works ?</a>
+									<a href="#collapseTwo" class="collapsed" data-toggle="collapse" data-parent="#accordian">What's it all about?</a>
 								</h4>
 							</div>
 							<div id="collapseTwo" class="panel-collapse collapse" aria-labelledby="headingTwo">
 								<div class="panel-body">
 									<p>
 										Jobify is an online E-learning website <br>
-										here you can learn programming languages,Tech News and improve your coding skill
+										Here, you can learn programming languages, read articles and improve your coding skills.
 									</p>
 								</div>
 							</div>
 						</div>
-
-
-
-
 
 					</div>
 				</div>
 
 				<div class="freeimage" id="meimg">
 					<div class="col-md-2 col-md-offset">
-						<img src="img/faq1.png">
+						<img src="img_m/FAQs.svg">
 					</div>
 				</div>
 
@@ -653,44 +600,84 @@ if (!isset($_SESSION['username'])) {
 
 
 	<!------ Include the above in your HEAD tag ---------->
-
-	<div class="container text-center">
-		<div class="card p-5">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="row">
-						<div class="col-md-6"> <input type="text" placeholder="name" class="form-control" /> </div>
-						<div class="col-md-6"> <input type="text" placeholder="email" class="form-control" /> </div>
-					</div>
-					<div class="row mt-3">
-						<div class="col-md-12"> <textarea class="form-control textarea" rows="4">message </textarea> </div>
-					</div>
-					<div class="send-button mt-4"> <button class="button">Send Message</button> </div>
-				</div>
+	<div class="bg bg-success" >
+		<div class="container-fluid servicebody" id="contactus">
+			<div class=" text-center mt-5">
+				<h1 class="sub-heading">CONTACT US</h1>
+			</div>
+			<div class="row ">
+				<div class="col-lg-12 mx-auto bg-success ">
+					<div class="card mt-2 mx-auto p-4 bg-light">
+						<div class="card-body bg-light">
+							<div class="container">
+								<form id="contact-form" role="form">
+									<div class="controls">
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group"> <label for="form_name">Firstname *</label> <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required."> </div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group"> <label for="form_lastname">Lastname *</label> <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required."> </div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<div class="form-group"> <label for="form_email">Email *</label> <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required."> </div>
+											</div>
+											<div class="col-md-6">
+												<div class="form-group"> <label for="form_need">Please specify your need *</label> <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+														<option value="" selected disabled>--Select Your Issue--</option>
+														<option>Request Invoice for order</option>
+														<option>Request order status</option>
+														<option>Haven't received cashback yet</option>
+														<option>Other</option>
+													</select> </div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<div class="form-group"> <label for="form_message">Message *</label> <textarea id="form_message" name="message" class="form-control" placeholder="Write your message here." rows="4" required="required" data-error="Please, leave us a message."></textarea> </div>
+											</div>
+											<div class="col-md-6"> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Send Message"> </div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div> <!-- /.8 -->
+				</div> <!-- /.row-->
 			</div>
 		</div>
 	</div>
-
-
-
-
-
-
 	<!---Contact us Section Ends------->
-
-
-
 
 	<!---footer Section Start	----->
 
-
-
 	<!---footer Section Ends	----->
-
-
 
 	<!---This is script section------->
 
+	<script type="text/javascript">
+		var preloader = document.getElementById('loading');
+
+		function myfunction() {
+			preloader.style.display = 'none';
+		}
+
+
+		function addButton() {
+			var body = document.getElementsByTagName('body')[0];
+			var myfaq1 = document.getElementById('myfaq');
+			var btn = document.createElement('button');
+			btn.innerHTML = 'jon';
+			myfaq1.appendChild(btn);
+			body.appendChild(myfaq);
+		}
+	</script>
+
+	<script src="js/jquery.ripples-min.js" type="text/javascript"></script>
+	<script src="js/typed.min.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
 
 
 
@@ -704,26 +691,5 @@ if (!isset($_SESSION['username'])) {
   <script src="assets/theme/js/script.js"></script> -->
 
 </body>
-<script type="text/javascript">
-	var preloader = document.getElementById('loading');
-
-	function myfunction() {
-		preloader.style.display = 'none';
-	}
-
-
-	function addButton() {
-		var body = document.getElementsByTagName('body')[0];
-		var myfaq1 = document.getElementById('myfaq');
-		var btn = document.createElement('button');
-		btn.innerHTML = 'sunil';
-		myfaq1.appendChild(btn);
-		body.appendChild(myfaq);
-	}
-</script>
-
-<script src="js/jquery.ripples-min.js" type="text/javascript"></script>
-<script src="js/typed.min.js" type="text/javascript"></script>
-<script src="js/main.js" type="text/javascript"></script>
 
 </html>

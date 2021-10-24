@@ -62,8 +62,7 @@
 					<li> <a href="">Works</a></li>
 					<li> <a href="">Team</a></li>
 					<li> <a href="">About</a></li>
-					<li> <a href="">Carrier</a></li>
-					<li> <a href="" id="our-location" class="btn-success" data-target="#mymodal"
+					<li> <a href="./login.php" id="our-location" class="btn-success" data-target="#"
 							data-toggle="modal">Login</a></li>
 				</ul>
 				<!------Navigation menus ends---->
@@ -82,19 +81,19 @@
 					<div class="left-box">
 						<form method="POST" action="registration.php">
 							<div class="form-group">
-								<label><i class="fa fa-user fa-2x"></i>&nbspUsername</label>
-								<input type="text" name="name" class="form-control">
+								<label><i class="fa fa-user fa-2x"></i>&nbspUsername*</label>
+								<input type="text" name="name" class="form-control" required>
 
-								<label><i class="fa fa-lock fa-2x"></i>&nbspPassword</label>
-								<input type="text" name="password" class="form-control" id="pwd">
+								<label><i class="fa fa-lock fa-2x"></i>&nbspPassword*</label>
+								<input type="text" name="password" class="form-control" id="pwd" required>
 
-								<label><i class="fa fa-key fa-2x"></i>&nbspConfirm Password</label>
-								<input type="text" name="confirm_password" class="form-control" id="cpwd">
+								<label><i class="fa fa-key fa-2x"></i>Confirm Password*</label>
+								<input type="text" name="confirm_password" class="form-control" id="cpwd" required>
 
-								<label><i class="fa fa-envelope fa-2x"></i>&nbspEmail</label>
-								<input type="text" name="email" class="form-control">
+								<label><i class="fa fa-envelope fa-2x"></i>&nbspEmail*</label>
+								<input type="text" name="email" class="form-control" required>
 								<div id="errorlabel"></div>
-								<a href="login.php"><button id="btn-login" type="submit">log in</button></a>
+								<button id="btn-login" type="submit">sign up</a></button>
 							</div>
 						</form>
 					</div>
@@ -109,8 +108,7 @@
 
 				</div>
 
-
-				<button id="btn-signup"><a id="sign" href="index.php">Sign up</a></button>
+				<!-- <button id="btn-signup"><a id="sign" href="index.php">Sign up</a></button> -->
 			</div>
 		</div>
 	</section>

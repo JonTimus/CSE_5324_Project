@@ -67,7 +67,8 @@ session_start();
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
 
 				</button>
 
@@ -76,12 +77,12 @@ session_start();
 			<div class="collapse navbar-collapse" id="navi">
 				<!------Navigation menus starts---->
 				<ul class="nav navbar-nav navbar-right">
-					<li> <a href="">Home</a></li>
+					<!-- <li> <a href="">Home</a></li>
 					<li> <a href="">Our Service</a></li>
 					<li> <a href="">Works</a></li>
 					<li> <a href="">Team</a></li>
-					<li> <a href="">About</a></li>
-					<li> <a href="" id="our-location" class="btn-success" data-target="#mymodal" data-toggle="modal">Login</a></li>
+					<li> <a href="">About</a></li> -->
+					<!-- <li> <a href="" id="our-location" class="btn-success" data-target="#mymodal" data-toggle="modal">Login</a></li> -->
 				</ul>
 				<!------Navigation menus ends---->
 			</div>
@@ -105,10 +106,10 @@ session_start();
 
 								<label><i class="fa fa-lock fa-2x"></i> Password</label>
 								<input type="password" autocomplete="off" name="password" class="form-control" id="password">
-
+							<br/>
 								<span id="perror"><?php
 													if (isset($_SESSION['error'])) {
-														echo "Error: Incorrect Username or Password, Try Again";
+														echo "Error: Try Again<br/>";
 													} else {
 														echo " ";
 													}
@@ -125,13 +126,11 @@ session_start();
 						</form>
 					</div>
 					<div class="right-box">
-						<!-- <span class="signinwith">Sign in With <br> Social Networks</span> -->
 						<span class="signinwith"><br></span>
 
 						<button class="social facebook">Log in with Facebook</button>
 						<button class="social twitter">Log in with Twitter</button>
 						<button class="social google">Log in with Google</button>
-						<!-- <button type="submit" class="social google g-signin2" data-onsuccess="onSignIn()">Log in with gmail</button> -->
 					</div>
 				</div>
 			</div>
