@@ -61,12 +61,6 @@ $quest_data=($ques->show_questions($cat));
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
-
-
-
-
-
 <script type="text/javascript">
   
   function timeout()                            //function to check time out
@@ -122,16 +116,10 @@ $quest_data=($ques->show_questions($cat));
 
 
 
-
-
-
-
-
-
-
 	<form action="result_show.php" method="POST" id="myform" style="margin-top: -400px;">
 	
-<center><div class="row col-sm-7 ">
+<center>
+  <div class="row col-sm-7 ">
   <script type="text/javascript">
       var timeleft=1*60;                                   //important--> the scope of javascript variable is global but not in php(we have to use global keyword)
 
@@ -183,7 +171,8 @@ $quest_data=($ques->show_questions($cat));
 	} 			//loop ends
 	?>
 
-</div></center>
+</div>
+</center>
 	<input type="submit" class="btn btn-success">
 </form>
 </div>

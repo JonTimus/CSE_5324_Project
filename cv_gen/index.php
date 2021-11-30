@@ -59,7 +59,7 @@ session_start();
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Email address</label>
-                        <input type="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="put a valid email address" required>
+                        <input type="email" class="form-control" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Put a valid email address" required>
                         <div class="form-text text-light">We'll never share your email with anyone else.</div>
                     </div>
                     <div class="mb-3">
@@ -116,11 +116,11 @@ session_start();
                     <div class="mb-3 d-flex justify-content-between">
                         <div>
                             <label for="exampleInputEmail1" class="form-label">From</label>
-                            <input type="text" name="from1" pattern="[0-9]" class="form-control">
+                            <input type="text" name="from1" pattern="[0-9][0-9]" class="form-control">
                         </div>
                         <div>
                             <label for="exampleInputEmail1" class="form-label">To</label>
-                            <input type="text" name="to1" pattern="[0-9]" class="form-control">
+                            <input type="text" name="to1" pattern="[0-9][0-9]" class="form-control">
                         </div>
                     </div>
                     <div class="mb-3">

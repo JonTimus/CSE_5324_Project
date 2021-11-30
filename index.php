@@ -291,7 +291,7 @@ if (!isset($_SESSION['username'])) {
 						<div class="service-icon">
 							<i class="fa fa-question"></i>
 						</div>
-						<h3><a href="online_quizzes/quizhome.php">Quizzes</a></h3> <!--  exercise/exercise.php -->
+						<h3><a href="online_quizzes/quiz_home.php">Quizzes</a></h3> <!--  exercise/exercise.php -->
 						<p>
 							Find all necessary practice questions and quizzes.
 						</p>
@@ -699,9 +699,6 @@ if (!isset($_SESSION['username'])) {
 
 
 	<!-- contact us end -->
-
-
-
 
 	<!--   <script src="assets/popper/popper.min.js"></script>
   <script src="assets/tether/tether.min.js"></script>

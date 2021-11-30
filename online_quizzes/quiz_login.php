@@ -38,7 +38,7 @@
 
 				  if (isset($_GET['run']) && $_GET['run']=="failed")
 				   {
-				  	  echo '<h5 class="text-success">wrong username or password</h5>';
+				  	  echo '<h5 class="text-success">Error: Try Again</h5>';
 				  }
 				  ?>
 				  <div class="card-body small" ">
@@ -72,10 +72,8 @@
 
 				  if (isset($_GET['run']) && $_GET['run']=="success")
 				   {
-				  	  echo '<h4 class="text-success">signup successfull</h4>';
+				  	  echo '<h4 class="text-success">Successfully Signed Up</h4>';
 				  }
-
-
 
 				   ?>
 				  <div class="card-body p-2 small">
@@ -100,14 +98,14 @@
 				    <div class="form-group">
 
 				    	<label for="email">Upload image:</label>
-				      <input type="file" class="form-control" id="email" placeholder="upload your image" name="img">
+				      <input type="file" class="form-control" id="email" placeholder="Upload your image" name="img">
 				  </div>
 
 				    <div class="checkbox">
 				      <label><input type="checkbox" name="remember"> Remember me</label>
 				    </div>
 				    <div class="float-left">
-				    <button type="submit" class="btn btn-danger" >Submit</button>
+				    <button type="submit" class="btn btn-danger">Submit</button>
 				</div>
 				  </form>
 				</div>

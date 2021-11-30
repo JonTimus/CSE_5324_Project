@@ -62,10 +62,11 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
             Our Services
           </a>
           <div class="dropdown-menu text-white fade" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="../programmingdemo.php">Programming Tutorials</a>
-            <a class="dropdown-item" href="../video tutorials/java/display_video_courses.php">Videos tutorials</a>
+            <a class="dropdown-item" href="../programming/android">Android Tutorials</a>
+            <a class="dropdown-item" href="../programming/java">Java Tutorials</a>
+            <a class="dropdown-item" href="../programming/python/python_home.html">Python Tutorials</a>
+            <a class="dropdown-item" href="../video_tutorials/java/display_video_courses.php">Videos Tutorials</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">online quiz</a>
           </div>
         </li>
         <!-- <li class="nav-item">
@@ -84,14 +85,10 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
 
 
 
-
-
-
-
   <!-- tab section start -->
 
   <div class="container mt-4 col-md-10 position-relative">
-    <h3 style="font-family: 'Catamaran', sans-serif;">Welcome <?php echo $_SESSION['username']; ?>,Lets start quiz</h3>
+    <h3 style="font-family: 'Catamaran', sans-serif;">Welcome <?php echo $_SESSION['username']; ?>, let's start your quiz:</h3>
 
     <ul class="nav nav-tabs">
       <li class="nav-item">
@@ -130,10 +127,7 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
                     foreach ($profile->cat_data as $key => $course) {
 
                     ?>
-
                       <option value="<?php echo $course['id']; ?>"><?php echo $course['cat_name']; ?></option> <!-- displaying course name in dropdown -->
-
-
                     <?php
                     }
 
