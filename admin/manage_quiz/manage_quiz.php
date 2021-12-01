@@ -182,7 +182,7 @@ body {
          <ul class="list-group text-white sidebar-list">
             <li class="list-group-item  bg-dark "><a href="../admin_main.php">Welcome Admin</a></li>
             <li class="list-group-item bg-dark "><a href="manage_courses/manage_courses.php">Manage Courses</a></li>
-            <li class="list-group-item bg-dark"><a href="">Manage Quize</a></li>
+            <li class="list-group-item bg-dark"><a href="">Manage quiz</a></li>
             <li class="list-group-item bg-dark"><a href="">Manage Videos</a></li>
             <li class="list-group-item bg-dark"><a href="">Manage Comments</a></li>
             <li class="list-group-item bg-dark"><a href="">Manage Users</a></li>
@@ -233,12 +233,12 @@ body {
 
 
   <div class="tab-pane container active" id="home">
-<div class="card-header mt-3 mr-5 bg-white text-info border-0 shadow card1 text-center" style="width: 1050px; box-shadow: 1px 1px 1px 1px #ccc"><b class="text-center">YOUR ONLINE QUIZE COURSES</b></div><br>
+<div class="card-header mt-3 mr-5 bg-white text-info border-0 shadow card1 text-center" style="width: 1050px; box-shadow: 1px 1px 1px 1px #ccc"><b class="text-center">YOUR ONLINE quiz COURSES</b></div><br>
 <div class="row justify-content-center">
 
 <div class="col-md-4">
  <center><label>select Course</label><br>
-    <form method="POST" action="../../online_quize/question_show.php">
+    <form method="POST" action="../../online_quiz/question_show.php">
     <select class="form-control" id="exampleFormControlSelect1" name="selected_course">
 
       <?php 

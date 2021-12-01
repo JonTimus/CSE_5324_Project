@@ -59,9 +59,9 @@ if (!isset($_SESSION['username'])) {
 
             if (isset($_POST['btnsubmitques'])) {
 
-            if(!empty($_POST['quizecheck'])) {
+            if(!empty($_POST['quizcheck'])) {
             // Counting number of checked checkboxes.
-            $checked_count = count($_POST['quizecheck']);
+            $checked_count = count($_POST['quizcheck']);
             // print_r($_POST);
             ?>
 
@@ -73,7 +73,7 @@ if (!isset($_SESSION['username'])) {
             
             <?php
             // Loop to store and display values of individual checked checkbox.
-            $selected = $_POST['quizecheck'];
+            $selected = $_POST['quizcheck'];
             
             $q1= " select * from questions ";
             $ansresults = mysqli_query($con,$q1);

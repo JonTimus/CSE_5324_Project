@@ -61,7 +61,7 @@
          <ul class="list-group text-white sidebar-list">
             <li class="list-group-item  bg-dark "><a href="">Welcome Admin</a></li>
             <li class="list-group-item bg-dark "><a href="manage_courses.php">Manage Courses</a></li>
-            <li class="list-group-item bg-dark"><a href="">Manage Quize</a></li>
+            <li class="list-group-item bg-dark"><a href="">Manage quiz</a></li>
             <li class="list-group-item bg-dark"><a href="">Manage Videos</a></li>
             <li class="list-group-item bg-dark"><a href="">Manage Comments</a></li>
             <li class="list-group-item bg-dark"><a href="">Manage Users</a></li>

@@ -89,7 +89,6 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
 
   <div class="container mt-4 col-md-10 position-relative">
     <h3 style="font-family: 'Catamaran', sans-serif;">Welcome <?php echo $_SESSION['username']; ?>, let's start your quiz:</h3>
-
     <ul class="nav nav-tabs">
       <li class="nav-item">
         <a class="nav-link active " data-toggle="tab" href="#menu1">Home</a>
@@ -150,9 +149,9 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
         <table class="table table-striped">
           <thead class="thead-dark">
             <tr>
-              <th scope="col">id</th>
+              <th scope="col">ID</th>
               <th scope="col">Name</th>
-              <th scope="col">email</th>
+              <th scope="col">Email</th>
               <th scope="col">image</th>
             </tr>
           </thead>

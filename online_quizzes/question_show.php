@@ -125,7 +125,7 @@ $quest_data=($ques->show_questions($cat));
 
   </script>
 
-	<div  style="margin-left:450px;font-size: 15px" id="timeout">time out</div>
+	<div  style="margin-left:450px;font-size: 15px" id="timeout">Time out</div>
 
 <?php 
 

@@ -109,7 +109,7 @@ $course=$quiz->show_courses();
            ?>
 
 
-          <form method="POST" action="add_quize.php">
+          <form method="POST" action="add_quiz.php">
             <div class="form-group">
               <label for="text">Question :</label>
               <input type="text" class="form-control" name="question" placeholder="Enter Question">

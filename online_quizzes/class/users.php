@@ -130,7 +130,7 @@ class users
 
 
 
-	public function add_quize($query_string)
+	public function add_quiz($query_string)
 	{
 		$this->conn->query($query_string);
 		return true;

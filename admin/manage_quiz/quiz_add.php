@@ -66,7 +66,7 @@ echo "answer is".$matchedanswer;
 $query="insert into question_test values('','$ques','$option1','$option2','$option3','$option4','$matchedanswer','$cat')"; //$cat value comes from select name attribute
 
 // mysqli_query($con,$query);
-if ($quiz->add_quize($query)) 
+if ($quiz->add_quiz($query)) 
 {
 	header("location:manage_quiz.php?run=success");
 }

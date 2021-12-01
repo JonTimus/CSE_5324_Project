@@ -13,7 +13,7 @@ $array=[$option1,$option2,$option3,$option4];
 $matchedanswer=array_search($answer,$array);
 $query="insert into question_test values('','$ques','$option1','$option2','$option3','$option4','$matchedanswer','$cat')"; //$cat value comes from select name attribute
 
-if ($quiz->add_quize($query)) 
+if ($quiz->add_quiz($query)) 
 {
 	header("location:index.php?run=success");
 }

@@ -23,7 +23,7 @@ $result=0;
 
 <div class="container ">
 	<br><br>
-	<h1 class="text-center">Jobify QUIZE</h1>
+	<h1 class="text-center">Jobify quiz</h1>
 	<br><br><br>
 
 	<table class="table text-center table-bordered table-hover">
@@ -41,10 +41,10 @@ if (isset($_POST['btnsubmitques']))
 {
 
 
-	if (!empty($_POST['quizecheck']))
+	if (!empty($_POST['quizcheck']))
 	 {
 		
-	 	$count=count($_POST['quizecheck']);
+	 	$count=count($_POST['quizcheck']);
 	 	?>
 
 	 	<td>
@@ -58,7 +58,7 @@ if (isset($_POST['btnsubmitques']))
 	 	
 	 	$i=1;
 
-	 	$selected=	$_POST['quizecheck'];
+	 	$selected=	$_POST['quizcheck'];
 	 	print_r($selected);
 
 

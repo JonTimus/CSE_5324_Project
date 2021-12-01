@@ -11,7 +11,7 @@
 	}
 	else
 	{
-		header("location:quize_login.php?run=failed");
+		header("location:quiz_login.php?run=failed");
 	}
 
  ?>

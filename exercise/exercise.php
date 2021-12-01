@@ -30,7 +30,7 @@ if ($con) {
 		
 	
 
-	<h1 class="text-center text-primary">Jobify QUIZE</h1>
+	<h1 class="text-center text-primary">Jobify quiz</h1>
 
 	<div class="col-lg-9 m-auto d-block">
 		<div class="card">
@@ -67,7 +67,7 @@ if ($con) {
 		 		
 				 ?>
 				 <div class="card-body">
-				 	<input type="radio" name="quizecheck[<?php echo $row['ans_id'] ?>]" value="<?php echo $row['aid'] ?>">
+				 	<input type="radio" name="quizcheck[<?php echo $row['ans_id'] ?>]" value="<?php echo $row['aid'] ?>">
 				 	<?php echo $row['answer']; ?>
 				 	
 				 </div>

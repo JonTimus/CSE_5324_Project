@@ -12,7 +12,7 @@ $userd = $admin->show_users();
 
 
 
-  <!-- <link href="../online_quize/admin/bootstrap.min.css" rel="stylesheet"> -->
+  <!-- <link href="../online_quiz/admin/bootstrap.min.css" rel="stylesheet"> -->
 
 
   <meta charset="utf-8">
