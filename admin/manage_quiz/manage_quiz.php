@@ -60,16 +60,6 @@ $quiz=new manage_quiz_class;			// creating object of  manage_courses_class.php
 
      }
 
-
-
-     /***
-Bootstrap4 Card with Tabs by @mdeuerlein
-***/
-
-/***
-Bootstrap4 Card with Tabs by @mdeuerlein
-***/
-
 body {
     background-color: #f7f8f9;
 }
@@ -138,10 +128,10 @@ body {
       <li class="nav-item active">
         <a class="nav-link text-white" href="../admin_main.php">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link text-white" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
+      </li> -->
+      <!-- <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Dropdown
         </a>
@@ -154,7 +144,7 @@ body {
       </li>
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+      </li> -->
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -308,17 +298,12 @@ body {
 		}
 
 
-	if ( isset($_GET['status']) and $_GET['status']=="deleted")    //second if condition for course deleted
+	if ( isset($_GET['status']) and $_GET['status']=="deleted")   
 	{
 		echo '<div class="col-md-4 mt-5">
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 				  Open modal
 				</button>
-
-
-
-
-
 
 				<!-- The Modal -->
 				<div class="modal fade" id="myModal">
@@ -355,11 +340,6 @@ body {
 				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
 				  Open modal
 				</button>
-
-
-
-
-
 
 				<!-- The Modal -->
 				<div class="modal fade" id="myModal">

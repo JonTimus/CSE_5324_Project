@@ -171,8 +171,8 @@ if (!isset($_SESSION['username'])) {
 					<li> <a href="#work">Learn</a></li>
 					<li> <a href="#our-members">Our Team</a></li>
 					<li> <a href="#myfaq">FAQs</a></li>
-					<li> <a href="#conus">contact us</a></li>
-					<li> <a href="logout.php" id="our-location" class="btn-success"><?php echo $_SESSION['username'];   ?></a></li>
+					<li> <a href="#conus">Contact us</a></li>
+					<li> <a href="logout.php" id="our-location" class="btn-success"><?php echo $_SESSION['username']; ?></a></li>
 				</ul>
 				<!------Navigation menus ends---->
 			</div>

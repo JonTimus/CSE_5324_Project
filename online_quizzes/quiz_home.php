@@ -4,7 +4,7 @@ include("class/users.php");        //including the users class
 $profile = new users;               // craeting the object of user class so that we can call show_user_profile() method 
 extract($_POST);
 $profile->show_users_profile($_SESSION['username']);  //calling the show_users profile() method of users class using users class object reference
-//print_r($profile->data);
+// print_r($profile->data);
 
 ?>
 
@@ -34,10 +34,6 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
 
 <body style="">
 
-
-
-
-
   <!-- ========================================================================================================================== -->
 
   <!-- navigation bar starts -->
@@ -54,9 +50,6 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
         <li class="nav-item active">
           <a class="nav-link text-white" href="../index.php">Home <span class="sr-only">(current)</span></a>
         </li>
-        <!-- <li class="nav-item">
-        <a class="nav-link text-white" href="../programmingdemo.php">programming tutorials</a>
-      </li> -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Our Services
@@ -93,12 +86,13 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
       <li class="nav-item">
         <a class="nav-link active " data-toggle="tab" href="#menu1">Home</a>
       </li>
-      <!--  <li class="nav-item">
-      <a class="nav-link" href="#menu2" data-toggle="tab">Profile</a>
-    </li>
-    <li class="nav-item li1">
-      <a class="nav-link justify-content-end" href="#menu3" data-toggle="tab">Logout</a>
-    </li> -->
+       <li class="nav-item">
+        <a class="nav-link " href="#menu2" data-toggle="tab">Profile</a>
+       </li>
+      <li class="nav-item li1">
+        <a href="../logout.php" id="our-location" class="nav-link justify-content-end">Logout</a>
+        <!-- <a class="nav-link justify-content-end" href="#menu3" data-toggle="tab">Logout</a> -->
+      </li>
 
     </ul>
 
@@ -109,7 +103,7 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
     <div class="tab-content">
       <div class="tab-pane active " id="menu1">
 
-        <center><button type="button" class="btn btn-success mt-5" href="#myid" data-toggle="collapse">Start Quiz</button></center>
+        <center><button type="button" class="btn btn-success mt-5" href="#myid" data-toggle="collapse">Select Language for Quiz</button></center>
 
         <!-- dropdown list starts -->
 
@@ -117,7 +111,7 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
           <div class="col-sm-6 mt-3">
             <div class="collapse" id="myid">
               <div class="form-group">
-                <label>select Course</label>
+                <label>Select Course</label>
                 <form method="POST" action="question_show.php">
                   <select class="form-control" id="exampleFormControlSelect1" name="selected_course">
 
@@ -125,9 +119,9 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
                     $profile->show_courses();                                 //calling show_courses() method of users class
                     foreach ($profile->cat_data as $key => $course) {
 
-                    ?>
-                      <option value="<?php echo $course['id']; ?>"><?php echo $course['cat_name']; ?></option> <!-- displaying course name in dropdown -->
-                    <?php
+                      ?>
+                        <option value="<?php echo $course['id']; ?>"><?php echo $course['cat_name']; ?></option> <!-- displaying course name in dropdown -->
+                      <?php
                     }
 
                     ?>
@@ -152,7 +146,7 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
               <th scope="col">ID</th>
               <th scope="col">Name</th>
               <th scope="col">Email</th>
-              <th scope="col">image</th>
+              <th scope="col">Image</th>
             </tr>
           </thead>
           <tbody>

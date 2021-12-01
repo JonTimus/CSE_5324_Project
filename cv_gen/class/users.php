@@ -14,21 +14,31 @@ class users
 	public $cat_data;
 	public $questios_details;
 
-	public function __construct()               //it is the constructor called automatically when we create object
+	public function __construct()               // constructor
 	{
 		$this->conn=new mysqli($this->host,$this->username,$this->pass,$this->db_name);
-		if ($this->conn->connect_errno) 
+		if(mysqli_connect_errno())
 		{
-			die("database connection failed".$this->conn->connect_errno);
+			die("database connection failed".mysqli_connect_error());
 		}
 	}
+	// {
+	// 	$this->conn=new mysqli($this->host,$this->username,$this->pass,$this->db_name);
+	// 	if ($this->conn->connect_errno) 
+	// 	{
+	// 		die("database connection failed".$this->conn->connect_errno);
+	// 	}
+	// }
 
 
-	public function signup($data)                 //funtion for signup(called in signup_submit.php)
+	public function signup($data)                 // function for signup
 	{
 		$this->conn->query($data);
-		return true;
 	}
+	// {
+	// 	$this->conn->query($data);
+	// 	return true;
+	// }
 
 	public function login($email,$pass)                  // funtion for login(called in login_submit.php)
 	{
@@ -48,39 +58,52 @@ class users
 
 	}
 
-	public function show_users_profile($email)  		 //function to diaplay the users profile
+	public function show_users_profile($email)  		 // function for showing users profile(called in profile.php)
 	{
 		$query=$this->conn->query("select * from users where email='$email'");
-		$row=$query->fetch_array(MYSQLI_ASSOC);
-
-		if ($query->num_rows>0) 
-		{	
-			$this->data[]=$row;
-
-		}
-	return $this->data;
+		$query->fetch_array(MYSQLI_ASSOC);
+		return $query;
 	}
+	// {
+	// 	$query=$this->conn->query("select * from users where email='$email'");
+	// 	$row=$query->fetch_array(MYSQLI_ASSOC);
 
-	public function show_courses()                //function to diaplay the course list in dropdown box
+	// 	if ($query->num_rows>0) 
+	// 	{	
+	// 		$this->data[]=$row;
+
+	// 	}
+	// return $this->data;
+	// }
+
+	public function show_courses()                // function to display the courses
 	{
-		$query=$this->conn->query("select * from category");
-
-		while($row=$query->fetch_array(MYSQLI_ASSOC))      // while loop to fetch all data one by one and store in cat_data array variable
-		{	
+		$query=$this->conn->query("select * from courses");
+		while ($row=$query->fetch_array(MYSQLI_ASSOC)) 
+		{
 			$this->cat_data[]=$row;
+		}
+		return $this->cat_data;
+	}
+	// {
+	// 	$query=$this->conn->query("select * from category");
+
+	// 	while($row=$query->fetch_array(MYSQLI_ASSOC))      // while loop to fetch all data one by one and store in cat_data array variable
+	// 	{	
+	// 		$this->cat_data[]=$row;
 			
 
-		}
+	// 	}
 		
-	return $this->cat_data;
-	}
+	// return $this->cat_data;
+	// }
 
 
 	public function show_questions($course_id)
 	{
 		$query=$this->conn->query("select * from question_test where course_id='$course_id'");
 
-		while($row=$query->fetch_array(MYSQLI_ASSOC))      // while loop to fetch all data one by one and store in cat_data array variable
+		while($row=$query->fetch_array(MYSQLI_ASSOC)) // while loop to fetch all data one by one and store in cat_data array variable
 		{	
 			$this->questios_details[]=$row;
 			
@@ -95,8 +118,8 @@ class users
 	{
 		
 
-		$ans=implode("", $data);    // to break the $data into string chunk bcoz $data is an array
-		$course_id=$_SESSION['course_id'];  // the session variable is created in question_show.php file
+		$ans=implode("", $data);    // implode function to convert array to string
+		$course_id=$_SESSION['course_id'];  // get course id from session variable
 		$right=0;
 		$wrong=0;
 		$no_answer=0;
@@ -105,7 +128,7 @@ class users
 
 		while($row=$query->fetch_array(MYSQLI_ASSOC))      // while loop to fetch all data one by one and store in cat_data array variable
 		{	
-			if ($row['answer']==$_POST[$row['id']])         //if answer is match
+			if ($row['answer']==$_POST[$row['id']])         // if condition to check the answer is right or wrong
 			 {
 				$right++;
 			}
@@ -119,35 +142,23 @@ class users
 			}
 
 		}
-		$array=array();                //creating an array
-		$array['right']=$right;         // putting the values inside the array
+		$array=array();                // array is created to store the result
+		$array['right']=$right;         //  array is stored with right and wrong answer
 		$array['wrong']=$wrong;
 		$array['not_attempted']=$no_answer;
-		return $array;					//returning the array filled with above values
+		return $array;					// array is returned
 
 		
 	 }
 
-
-
-	public function add_quiz($query_string)
+	public function add_quiz($query_string) // function to add quiz
 	{
 		$this->conn->query($query_string);
-		return true;
 	}
-
+	// {
+	// 	$this->conn->query($query_string);
+	// 	return true;
+	// }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 ?>

@@ -69,7 +69,6 @@ class users
 		{	
 			$this->cat_data[]=$row;
 			
-
 		}
 		
 	return $this->cat_data;
@@ -95,8 +94,8 @@ class users
 	{
 		
 
-		$ans=implode("", $data);    // to break the $data into string chunk bcoz $data is an array
-		$course_id=$_SESSION['course_id'];  // the session variable is created in question_show.php file
+		$ans=implode("", $data);    // implode function to convert array to string
+		$course_id=$_SESSION['course_id'];  // get course id from session variable
 		$right=0;
 		$wrong=0;
 		$no_answer=0;
@@ -105,27 +104,26 @@ class users
 
 		while($row=$query->fetch_array(MYSQLI_ASSOC))      // while loop to fetch all data one by one and store in cat_data array variable
 		{	
-			if ($row['answer']==$_POST[$row['id']])         //if answer is match
+			if ($row['answer']==$_POST[$row['id']])         // if answer is right
 			 {
 				$right++;
 			}
-			elseif ($_POST[$row['id']]=="no_attempt")   // if user didnt selected any answer
+			elseif ($_POST[$row['id']]=="no_attempt")   // if no answer is selected
 			 {
 				$no_answer++;
 			}
 			else
 			{
-				$wrong++;                          // if wrong answer is selected by user
+				$wrong++;                          // if answer is wrong
 			}
 
 		}
-		$array=array();                //creating an array
-		$array['right']=$right;         // putting the values inside the array
+		$array=array();                // array to store the result
+		$array['right']=$right;         // store the result in array
 		$array['wrong']=$wrong;
 		$array['not_attempted']=$no_answer;
-		return $array;					//returning the array filled with above values
+		return $array;					// return the array
 
-		
 	 }
 
 

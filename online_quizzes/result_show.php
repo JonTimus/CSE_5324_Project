@@ -78,8 +78,8 @@ $answers=$res->show_result($_POST);    //here answers becomes an array because s
   	<?php echo $message; ?> <b><?php echo $percentage.' %'; ?></b>
   </div>
 
-  <button type="button" class="btn btn-primary mt-3"><a href="quizhome.php" style="text-decoration: none; color: white;">Back</a></button>
- <!--   <a href="quizhome.php" class="btn btn-success"> Back </a> -->
+  <button type="button" class="btn btn-primary mt-3"><a href="quiz_home.php" style="text-decoration: none; color: white;">Back</a></button>
+ <!--   <a href="quiz_home.php" class="btn btn-success"> Back </a> -->
 
 </div></center>
 </div>

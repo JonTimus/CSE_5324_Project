@@ -7,7 +7,7 @@
 	echo $ans;                 //to get the value from form directly
 	if ($ans==1) 
 	{
-		header("location:quizhome.php");
+		header("location:quiz_home.php");
 	}
 	else
 	{
