@@ -185,7 +185,7 @@ session_start();
 				<div class="col-md-4 col-sm-6 col-xs-12 content-border" style="margin-bottom: 10px;">
 					<div class="latest-news-wrap">
 						<div class="news-img">
-							<img src=<?php echo $res['language_image']; ?> class="img-responsive">
+							<img src="uploads/thumbnail/<?php echo $res['language_image']; ?> " class="img-responsive">
 							<div class="deat">
 								<span><?php echo $res['language_name']; ?></span>
 							</div>
