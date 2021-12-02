@@ -17,5 +17,3 @@ if ($quiz->add_quiz($query))
 {
 	header("location:index.php?run=success");
 }
-
- ?>

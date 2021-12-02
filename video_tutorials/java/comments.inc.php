@@ -35,7 +35,7 @@ function getComments($con)
 		{
 			echo "<form class='delete-form' method='POST' action='".deleteComment($con)."'>
 			<input type='hidden' name='cid' value='".$row['cid']."'>
-			<button type='submit' name='CommentDelete'>Delete</button> 
+			<button type='submit' name='CommentDelete'>Delete </button> 
 			</form>";
 			$_SESSION['id']=$row['cid'];
 
@@ -45,7 +45,7 @@ function getComments($con)
 			<input type='hidden' name='cid' value='".$row['cid']."'>
 			<button type='button' class='btnEdit'  data-toggle='modal' data-target='#myModal' style='position: absolute !important;
 	top:0px !important;
-	right:120px !important;'>edit</button> 
+	right:120px !important;'>Edit</button> 
 			";
 
 

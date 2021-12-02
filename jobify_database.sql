@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 15, 2021 at 06:33 AM
+-- Generation Time: Dec 02, 2021 at 02:29 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.11
 
@@ -76,18 +76,10 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `cat_name`) VALUES
-(1, 'php'),
-(2, 'java'),
-(3, 'javascript'),
-(4, 'python'),
-(5, 'android'),
-(6, 'jQuery'),
-(8, 'IR'),
-(9, 'hadoop'),
-(10, 'hadoop'),
-(11, 'comedy nights'),
-(12, 'css'),
-(13, 'spring');
+(1, 'PHP'),
+(3, 'Java'),
+(4, 'Python'),
+(15, 'C++');
 
 -- --------------------------------------------------------
 
@@ -109,8 +101,9 @@ CREATE TABLE `commentsection` (
 --
 
 INSERT INTO `commentsection` (`cid`, `uid`, `date`, `message`, `video_id`, `video_path`) VALUES
-(160, 'Jon Timus', '2021-10-21 06:31:32', 'Great video!', 52, ''),
-(162, 'Jon Timus', '2021-10-21 15:53:52', 'Hello!!', 51, '');
+(162, 'Jon Timus', '2021-10-21 15:53:52', 'Hello!!', 51, ''),
+(163, 'Nudraty', '2021-11-16 15:32:52', 'hello', 51, ''),
+(167, 'Jon Timus', '2021-12-01 22:12:08', 'Great Video, helped a lot!', 52, '');
 
 -- --------------------------------------------------------
 
@@ -152,9 +145,7 @@ INSERT INTO `courses` (`id`, `topic_name`, `description`, `course_name`) VALUES
 (48, 'Python - Variable Types', '<h1 style=\"margin-left:120px\"><span style=\"color:#3498db\"><span style=\"font-size:24px\"><strong>Python - Variable Types</strong></span></span></h1>\r\n\r\n<p>Variables are nothing but reserved memory locations to store values. This means that when you create a variable you reserve some space in memory.</p>\r\n\r\n<p>Based on the data type of a variable, the interpreter allocates memory and decides what can be stored in the reserved memory. Therefore, by assigning different data types to variables, you can store integers, decimals or characters in these variables.</p>\r\n\r\n<h2>Assigning Values to Variables</h2>\r\n\r\n<p>Python variables do not need explicit declaration to reserve memory space. The declaration happens automatically when you assign a value to a variable. The equal sign (=) is used to assign values to variables.</p>\r\n\r\n<p>The operand to the left of the = operator is the name of the variable and the operand to the right of the = operator is the value stored in the variable. For example &minus;</p>\r\n\r\n<p><a href=\"http://tpcg.io/Eh9FoM\" rel=\"nofollow\" target=\"_blank\">&nbsp;Live Demo</a></p>\r\n\r\n<pre>\r\n#!/usr/bin/python\r\n\r\ncounter = 100          # An integer assignment\r\nmiles   = 1000.0       # A floating point\r\nname    = &quot;John&quot;       # A string\r\n\r\nprint counter\r\nprint miles\r\nprint name</pre>\r\n\r\n<p>Here, 100, 1000.0 and &quot;John&quot; are the values assigned to&nbsp;<em>counter</em>,&nbsp;<em>miles</em>, and&nbsp;<em>name</em>&nbsp;variables, respectively. This produces the following result &minus;</p>\r\n\r\n<pre>\r\n100\r\n1000.0\r\nJohn\r\n</pre>\r\n\r\n<h2>Multiple Assignment</h2>\r\n\r\n<p>Python allows you to assign a single value to several variables simultaneously. For example &minus;</p>\r\n\r\n<pre>\r\na = b = c = 1\r\n</pre>\r\n\r\n<p>Here, an integer object is created with the value 1, and all three variables are assigned to the same memory location. You can also assign multiple objects to multiple variables. For example &minus;</p>\r\n\r\n<pre>\r\na,b,c = 1,2,&quot;john&quot;\r\n</pre>\r\n\r\n<p>Here, two integer objects with values 1 and 2 are assigned to variables a and b respectively, and one string object with the value &quot;john&quot; is assigned to the variable c.</p>\r\n\r\n<h2>Standard Data Types</h2>\r\n\r\n<p>The data stored in memory can be of many types. For example, a person&#39;s age is stored as a numeric value and his or her address is stored as alphanumeric characters. Python has various standard data types that are used to define the operations possible on them and the storage method for each of them.</p>\r\n\r\n<p>Python has five standard data types &minus;</p>\r\n\r\n<ul>\r\n	<li>Numbers</li>\r\n	<li>String</li>\r\n	<li>List</li>\r\n	<li>Tuple</li>\r\n	<li>Dictionary</li>\r\n</ul>\r\n\r\n<h2>Python Numbers</h2>\r\n\r\n<p>Number data types store numeric values. Number objects are created when you assign a value to them. For example &minus;</p>\r\n\r\n<pre>\r\nvar1 = 1\r\nvar2 = 10\r\n</pre>\r\n\r\n<p>You can also delete the reference to a number object by using the del statement. The syntax of the del statement is &minus;</p>\r\n\r\n<pre>\r\ndel var1[,var2[,var3[....,varN]]]]\r\n</pre>\r\n\r\n<p>You can delete a single object or multiple objects by using the del statement. For example &minus;</p>\r\n\r\n<pre>\r\ndel var\r\ndel var_a, var_b\r\n</pre>\r\n\r\n<p>Python supports four different numerical types &minus;</p>\r\n\r\n<ul>\r\n	<li>int (signed integers)</li>\r\n	<li>long (long integers, they can also be represented in octal and hexadecimal)</li>\r\n	<li>float (floating point real values)</li>\r\n	<li>complex (complex numbers)</li>\r\n</ul>\r\n\r\n<h3>Examples</h3>\r\n\r\n<p>Here are some examples of numbers &minus;</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>int</th>\r\n			<th>long</th>\r\n			<th>float</th>\r\n			<th>complex</th>\r\n		</tr>\r\n		<tr>\r\n			<td>10</td>\r\n			<td>51924361L</td>\r\n			<td>0.0</td>\r\n			<td>3.14j</td>\r\n		</tr>\r\n		<tr>\r\n			<td>100</td>\r\n			<td>-0x19323L</td>\r\n			<td>15.20</td>\r\n			<td>45.j</td>\r\n		</tr>\r\n		<tr>\r\n			<td>-786</td>\r\n			<td>0122L</td>\r\n			<td>-21.9</td>\r\n			<td>9.322e-36j</td>\r\n		</tr>\r\n		<tr>\r\n			<td>080</td>\r\n			<td>0xDEFABCECBDAECBFBAEl</td>\r\n			<td>32.3+e18</td>\r\n			<td>.876j</td>\r\n		</tr>\r\n		<tr>\r\n			<td>-0490</td>\r\n			<td>535633629843L</td>\r\n			<td>-90.</td>\r\n			<td>-.6545+0J</td>\r\n		</tr>\r\n		<tr>\r\n			<td>-0x260</td>\r\n			<td>-052318172735L</td>\r\n			<td>-32.54e100</td>\r\n			<td>3e+26J</td>\r\n		</tr>\r\n		<tr>\r\n			<td>0x69</td>\r\n			<td>-4721885298529L</td>\r\n			<td>70.2-E12</td>\r\n			<td>4.53e-7j</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<ul>\r\n	<li>\r\n	<p>Python allows you to use a lowercase l with long, but it is recommended that you use only an uppercase L to avoid confusion with the number 1. Python displays long integers with an uppercase L.</p>\r\n	</li>\r\n	<li>\r\n	<p>A complex number consists of an ordered pair of real floating-point numbers denoted by x + yj, where x and y are the real numbers and j is the imaginary unit.</p>\r\n	</li>\r\n</ul>\r\n\r\n<h2>Python Strings</h2>\r\n\r\n<p>Strings in Python are identified as a contiguous set of characters represented in the quotation marks. Python allows for either pairs of single or double quotes. Subsets of strings can be taken using the slice operator ([ ] and [:] ) with indexes starting at 0 in the beginning of the string and working their way from -1 at the end.</p>\r\n\r\n<p>The plus (+) sign is the string concatenation operator and the asterisk (*) is the repetition operator. For example &minus;</p>\r\n\r\n<p><a href=\"http://tpcg.io/PsSj6c\" rel=\"nofollow\" target=\"_blank\">&nbsp;Live Demo</a></p>\r\n\r\n<pre>\r\n#!/usr/bin/python\r\n\r\nstr = &#39;Hello World!&#39;\r\n\r\nprint str          # Prints complete string\r\nprint str[0]       # Prints first character of the string\r\nprint str[2:5]     # Prints characters starting from 3rd to 5th\r\nprint str[2:]      # Prints string starting from 3rd character\r\nprint str * 2      # Prints string two times\r\nprint str + &quot;TEST&quot; # Prints concatenated string</pre>\r\n\r\n<p>This will produce the following result &minus;</p>\r\n\r\n<pre>\r\nHello World!\r\nH\r\nllo\r\nllo World!\r\nHello World!Hello World!\r\nHello World!TEST\r\n</pre>\r\n\r\n<h2>Python Lists</h2>\r\n\r\n<p>Lists are the most versatile of Python&#39;s compound data types. A list contains items separated by commas and enclosed within square brackets ([]). To some extent, lists are similar to arrays in C. One difference between them is that all the items belonging to a list can be of different data type.</p>\r\n\r\n<p>The values stored in a list can be accessed using the slice operator ([ ] and [:]) with indexes starting at 0 in the beginning of the list and working their way to end -1. The plus (+) sign is the list concatenation operator, and the asterisk (*) is the repetition operator. For example &minus;</p>\r\n\r\n<pre>\r\n#!/usr/bin/python\r\n\r\nlist = [ &#39;abcd&#39;, 786 , 2.23, &#39;john&#39;, 70.2 ]\r\ntinylist = [123, &#39;john&#39;]\r\n\r\nprint list          # Prints complete list\r\nprint list[0]       # Prints first element of the list\r\nprint list[1:3]     # Prints elements starting from 2nd till 3rd \r\nprint list[2:]      # Prints elements starting from 3rd element\r\nprint tinylist * 2  # Prints list two times\r\nprint list + tinylist # Prints concatenated lists</pre>\r\n\r\n<p>This produce the following result &minus;</p>\r\n\r\n<pre>\r\n[&#39;abcd&#39;, 786, 2.23, &#39;john&#39;, 70.2]\r\nabcd\r\n[786, 2.23]\r\n[2.23, &#39;john&#39;, 70.2]\r\n[123, &#39;john&#39;, 123, &#39;john&#39;]\r\n[&#39;abcd&#39;, 786, 2.23, &#39;john&#39;, 70.2, 123, &#39;john&#39;]\r\n</pre>\r\n\r\n<h2>Python Tuples</h2>\r\n\r\n<p>A tuple is another sequence data type that is similar to the list. A tuple consists of a number of values separated by commas. Unlike lists, however, tuples are enclosed within parentheses.</p>\r\n\r\n<p>The main differences between lists and tuples are: Lists are enclosed in brackets ( [ ] ) and their elements and size can be changed, while tuples are enclosed in parentheses ( ( ) ) and cannot be updated. Tuples can be thought of as&nbsp;<strong>read-only</strong>&nbsp;lists. For example &minus;</p>\r\n\r\n<p><a href=\"http://tpcg.io/XYBk9k\" rel=\"nofollow\" target=\"_blank\">&nbsp;Live Demo</a></p>\r\n\r\n<pre>\r\n#!/usr/bin/python\r\n\r\ntuple = ( &#39;abcd&#39;, 786 , 2.23, &#39;john&#39;, 70.2  )\r\ntinytuple = (123, &#39;john&#39;)\r\n\r\nprint tuple           # Prints complete list\r\nprint tuple[0]        # Prints first element of the list\r\nprint tuple[1:3]      # Prints elements starting from 2nd till 3rd \r\nprint tuple[2:]       # Prints elements starting from 3rd element\r\nprint tinytuple * 2   # Prints list two times\r\nprint tuple + tinytuple # Prints concatenated lists</pre>\r\n\r\n<p>This produce the following result &minus;</p>\r\n\r\n<pre>\r\n(&#39;abcd&#39;, 786, 2.23, &#39;john&#39;, 70.2)\r\nabcd\r\n(786, 2.23)\r\n(2.23, &#39;john&#39;, 70.2)\r\n(123, &#39;john&#39;, 123, &#39;john&#39;)\r\n(&#39;abcd&#39;, 786, 2.23, &#39;john&#39;, 70.2, 123, &#39;john&#39;)\r\n</pre>\r\n\r\n<p>The following code is invalid with tuple, because we attempted to update a tuple, which is not allowed. Similar case is possible with lists &minus;</p>\r\n\r\n<pre>\r\n#!/usr/bin/python\r\n\r\ntuple = ( &#39;abcd&#39;, 786 , 2.23, &#39;john&#39;, 70.2  )\r\nlist = [ &#39;abcd&#39;, 786 , 2.23, &#39;john&#39;, 70.2  ]\r\ntuple[2] = 1000    # Invalid syntax with tuple\r\nlist[2] = 1000     # Valid syntax with list</pre>\r\n\r\n<h2>Python Dictionary</h2>\r\n\r\n<p>Python&#39;s dictionaries are kind of hash table type. They work like associative arrays or hashes found in Perl and consist of key-value pairs. A dictionary key can be almost any Python type, but are usually numbers or strings. Values, on the other hand, can be any arbitrary Python object.</p>\r\n\r\n<p>Dictionaries are enclosed by curly braces ({ }) and values can be assigned and accessed using square braces ([]). For example &minus;</p>\r\n\r\n<p><a href=\"http://tpcg.io/DlY1Gc\" rel=\"nofollow\" target=\"_blank\">&nbsp;Live Demo</a></p>\r\n\r\n<pre>\r\n#!/usr/bin/python\r\n\r\ndict = {}\r\ndict[&#39;one&#39;] = &quot;This is one&quot;\r\ndict[2]     = &quot;This is two&quot;\r\n\r\ntinydict = {&#39;name&#39;: &#39;john&#39;,&#39;code&#39;:6734, &#39;dept&#39;: &#39;sales&#39;}\r\n\r\n\r\nprint dict[&#39;one&#39;]       # Prints value for &#39;one&#39; key\r\nprint dict[2]           # Prints value for 2 key\r\nprint tinydict          # Prints complete dictionary\r\nprint tinydict.keys()   # Prints all the keys\r\nprint tinydict.values() # Prints all the values</pre>\r\n\r\n<p>This produce the following result &minus;</p>\r\n\r\n<pre>\r\nThis is one\r\nThis is two\r\n{&#39;dept&#39;: &#39;sales&#39;, &#39;code&#39;: 6734, &#39;name&#39;: &#39;john&#39;}\r\n[&#39;dept&#39;, &#39;code&#39;, &#39;name&#39;]\r\n[&#39;sales&#39;, 6734, &#39;john&#39;]\r\n</pre>\r\n\r\n<p>Dictionaries have no concept of order among elements. It is incorrect to say that the elements are &quot;out of order&quot;; they are simply unordered.</p>\r\n\r\n<h2>Data Type Conversion</h2>\r\n\r\n<p>Sometimes, you may need to perform conversions between the built-in types. To convert between types, you simply use the type name as a function.</p>\r\n\r\n<p>There are several built-in functions to perform conversion from one data type to another. These functions return a new object representing the converted value.</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Sr.No.</th>\r\n			<th>Function &amp; Description</th>\r\n		</tr>\r\n		<tr>\r\n			<td>1</td>\r\n			<td>\r\n			<p><strong>int(x [,base])</strong></p>\r\n\r\n			<p>Converts x to an integer. base specifies the base if x is a string.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>2</td>\r\n			<td>\r\n			<p><strong>long(x [,base] )</strong></p>\r\n\r\n			<p>Converts x to a long integer. base specifies the base if x is a string.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>3</td>\r\n			<td>\r\n			<p><strong>float(x)</strong></p>\r\n\r\n			<p>Converts x to a floating-point number.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>4</td>\r\n			<td>\r\n			<p><strong>complex(real [,imag])</strong></p>\r\n\r\n			<p>Creates a complex number.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>5</td>\r\n			<td>\r\n			<p><strong>str(x)</strong></p>\r\n\r\n			<p>Converts object x to a string representation.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>6</td>\r\n			<td>\r\n			<p><strong>repr(x)</strong></p>\r\n\r\n			<p>Converts object x to an expression string.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>7</td>\r\n			<td>\r\n			<p><strong>eval(str)</strong></p>\r\n\r\n			<p>Evaluates a string and returns an object.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>8</td>\r\n			<td>\r\n			<p><strong>tuple(s)</strong></p>\r\n\r\n			<p>Converts s to a tuple.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>9</td>\r\n			<td>\r\n			<p><strong>list(s)</strong></p>\r\n\r\n			<p>Converts s to a list.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>10</td>\r\n			<td>\r\n			<p><strong>set(s)</strong></p>\r\n\r\n			<p>Converts s to a set.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>11</td>\r\n			<td>\r\n			<p><strong>dict(d)</strong></p>\r\n\r\n			<p>Creates a dictionary. d must be a sequence of (key,value) tuples.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>12</td>\r\n			<td>\r\n			<p><strong>frozenset(s)</strong></p>\r\n\r\n			<p>Converts s to a frozen set.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>13</td>\r\n			<td>\r\n			<p><strong>chr(x)</strong></p>\r\n\r\n			<p>Converts an integer to a character.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>14</td>\r\n			<td>\r\n			<p><strong>unichr(x)</strong></p>\r\n\r\n			<p>Converts an integer to a Unicode character.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>15</td>\r\n			<td>\r\n			<p><strong>ord(x)</strong></p>\r\n\r\n			<p>Converts a single character to its integer value.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>16</td>\r\n			<td>\r\n			<p><strong>hex(x)</strong></p>\r\n\r\n			<p>Converts an integer to a hexadecimal string.</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>17</td>\r\n			<td>\r\n			<p><strong>oct(x)</strong></p>\r\n\r\n			<p>Converts an integer to an octal string.</p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n', 'PYTHON');
 INSERT INTO `courses` (`id`, `topic_name`, `description`, `course_name`) VALUES
 (49, 'Python - Basic Operators', '<h1 style=\"margin-left:120px\"><span style=\"font-size:24px\"><span style=\"color:#3498db\"><strong>Python - Basic Operators</strong></span></span></h1>\r\n\r\n<p>Operators are the constructs which can manipulate the value of operands.</p>\r\n\r\n<p>Consider the expression 4 + 5 = 9. Here, 4 and 5 are called operands and + is called operator.</p>\r\n\r\n<h2>Types of Operator</h2>\r\n\r\n<p>Python language supports the following types of operators.</p>\r\n\r\n<ul>\r\n	<li>Arithmetic Operators</li>\r\n	<li>Comparison (Relational) Operators</li>\r\n	<li>Assignment Operators</li>\r\n	<li>Logical Operators</li>\r\n	<li>Bitwise Operators</li>\r\n	<li>Membership Operators</li>\r\n	<li>Identity Operators</li>\r\n</ul>\r\n\r\n<p>Let us have a look on all operators one by one.</p>\r\n\r\n<h2>Python Arithmetic Operators</h2>\r\n\r\n<p>Assume variable a holds 10 and variable b holds 20, then &minus;</p>\r\n\r\n<p>[&nbsp;<a href=\"https://www.tutorialspoint.com/python/arithmetic_operators_example.htm\">Show Example</a>&nbsp;]</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Operator</th>\r\n			<th>Description</th>\r\n			<th>Example</th>\r\n		</tr>\r\n		<tr>\r\n			<td>+ Addition</td>\r\n			<td>Adds values on either side of the operator.</td>\r\n			<td>a + b = 30</td>\r\n		</tr>\r\n		<tr>\r\n			<td>- Subtraction</td>\r\n			<td>Subtracts right hand operand from left hand operand.</td>\r\n			<td>a &ndash; b = -10</td>\r\n		</tr>\r\n		<tr>\r\n			<td>* Multiplication</td>\r\n			<td>Multiplies values on either side of the operator</td>\r\n			<td>a * b = 200</td>\r\n		</tr>\r\n		<tr>\r\n			<td>/ Division</td>\r\n			<td>Divides left hand operand by right hand operand</td>\r\n			<td>b / a = 2</td>\r\n		</tr>\r\n		<tr>\r\n			<td>% Modulus</td>\r\n			<td>Divides left hand operand by right hand operand and returns remainder</td>\r\n			<td>b % a = 0</td>\r\n		</tr>\r\n		<tr>\r\n			<td>** Exponent</td>\r\n			<td>Performs exponential (power) calculation on operators</td>\r\n			<td>a**b =10 to the power 20</td>\r\n		</tr>\r\n		<tr>\r\n			<td>//</td>\r\n			<td>Floor Division - The division of operands where the result is the quotient in which the digits after the decimal point are removed. But if one of the operands is negative, the result is floored, i.e., rounded away from zero (towards negative infinity) &minus;</td>\r\n			<td>9//2 = 4 and 9.0//2.0 = 4.0, -11//3 = -4, -11.0//3 = -4.0</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<h2>Python Comparison Operators</h2>\r\n\r\n<p>These operators compare the values on either sides of them and decide the relation among them. They are also called Relational operators.</p>\r\n\r\n<p>Assume variable a holds 10 and variable b holds 20, then &minus;</p>\r\n\r\n<p>[&nbsp;<a href=\"https://www.tutorialspoint.com/python/comparison_operators_example.htm\">Show Example</a>&nbsp;]</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Operator</th>\r\n			<th>Description</th>\r\n			<th>Example</th>\r\n		</tr>\r\n		<tr>\r\n			<td>==</td>\r\n			<td>If the values of two operands are equal, then the condition becomes true.</td>\r\n			<td>(a == b) is not true.</td>\r\n		</tr>\r\n		<tr>\r\n			<td>!=</td>\r\n			<td>If values of two operands are not equal, then condition becomes true.</td>\r\n			<td>(a != b) is true.</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&lt;&gt;</td>\r\n			<td>If values of two operands are not equal, then condition becomes true.</td>\r\n			<td>(a &lt;&gt; b) is true. This is similar to != operator.</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&gt;</td>\r\n			<td>If the value of left operand is greater than the value of right operand, then condition becomes true.</td>\r\n			<td>(a &gt; b) is not true.</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&lt;</td>\r\n			<td>If the value of left operand is less than the value of right operand, then condition becomes true.</td>\r\n			<td>(a &lt; b) is true.</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&gt;=</td>\r\n			<td>If the value of left operand is greater than or equal to the value of right operand, then condition becomes true.</td>\r\n			<td>(a &gt;= b) is not true.</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&lt;=</td>\r\n			<td>If the value of left operand is less than or equal to the value of right operand, then condition becomes true.</td>\r\n			<td>(a &lt;= b) is true.</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<h2>Python Assignment Operators</h2>\r\n\r\n<p>Assume variable a holds 10 and variable b holds 20, then &minus;</p>\r\n\r\n<p>[&nbsp;<a href=\"https://www.tutorialspoint.com/python/assignment_operators_example.htm\">Show Example</a>&nbsp;]</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Operator</th>\r\n			<th>Description</th>\r\n			<th>Example</th>\r\n		</tr>\r\n		<tr>\r\n			<td>=</td>\r\n			<td>Assigns values from right side operands to left side operand</td>\r\n			<td>c = a + b assigns value of a + b into c</td>\r\n		</tr>\r\n		<tr>\r\n			<td>+= Add AND</td>\r\n			<td>It adds right operand to the left operand and assign the result to left operand</td>\r\n			<td>c += a is equivalent to c = c + a</td>\r\n		</tr>\r\n		<tr>\r\n			<td>-= Subtract AND</td>\r\n			<td>It subtracts right operand from the left operand and assign the result to left operand</td>\r\n			<td>c -= a is equivalent to c = c - a</td>\r\n		</tr>\r\n		<tr>\r\n			<td>*= Multiply AND</td>\r\n			<td>It multiplies right operand with the left operand and assign the result to left operand</td>\r\n			<td>c *= a is equivalent to c = c * a</td>\r\n		</tr>\r\n		<tr>\r\n			<td>/= Divide AND</td>\r\n			<td>It divides left operand with the right operand and assign the result to left operand</td>\r\n			<td>c /= a is equivalent to c = c / ac /= a is equivalent to c = c / a</td>\r\n		</tr>\r\n		<tr>\r\n			<td>%= Modulus AND</td>\r\n			<td>It takes modulus using two operands and assign the result to left operand</td>\r\n			<td>c %= a is equivalent to c = c % a</td>\r\n		</tr>\r\n		<tr>\r\n			<td>**= Exponent AND</td>\r\n			<td>Performs exponential (power) calculation on operators and assign value to the left operand</td>\r\n			<td>c **= a is equivalent to c = c ** a</td>\r\n		</tr>\r\n		<tr>\r\n			<td>//= Floor Division</td>\r\n			<td>It performs floor division on operators and assign value to the left operand</td>\r\n			<td>c //= a is equivalent to c = c // a</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<h2>Python Bitwise Operators</h2>\r\n\r\n<p>Bitwise operator works on bits and performs bit by bit operation. Assume if a = 60; and b = 13; Now in binary format they will be as follows &minus;</p>\r\n\r\n<p>a = 0011 1100</p>\r\n\r\n<p>b = 0000 1101</p>\r\n\r\n<p>-----------------</p>\r\n\r\n<p>a&amp;b = 0000 1100</p>\r\n\r\n<p>a|b = 0011 1101</p>\r\n\r\n<p>a^b = 0011 0001</p>\r\n\r\n<p>~a&nbsp; = 1100 0011</p>\r\n\r\n<p>There are following Bitwise operators supported by Python language</p>\r\n\r\n<p>[&nbsp;<a href=\"https://www.tutorialspoint.com/python/bitwise_operators_example.htm\">Show Example</a>&nbsp;]</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Operator</th>\r\n			<th>Description</th>\r\n			<th>Example</th>\r\n		</tr>\r\n		<tr>\r\n			<td>&amp; Binary AND</td>\r\n			<td>Operator copies a bit to the result if it exists in both operands</td>\r\n			<td>(a &amp; b) (means 0000 1100)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>| Binary OR</td>\r\n			<td>It copies a bit if it exists in either operand.</td>\r\n			<td>(a | b) = 61 (means 0011 1101)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>^ Binary XOR</td>\r\n			<td>It copies the bit if it is set in one operand but not both.</td>\r\n			<td>(a ^ b) = 49 (means 0011 0001)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>~ Binary Ones Complement</td>\r\n			<td>It is unary and has the effect of &#39;flipping&#39; bits.</td>\r\n			<td>(~a ) = -61 (means 1100 0011 in 2&#39;s complement form due to a signed binary number.</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&lt;&lt; Binary Left Shift</td>\r\n			<td>The left operands value is moved left by the number of bits specified by the right operand.</td>\r\n			<td>a &lt;&lt; 2 = 240 (means 1111 0000)</td>\r\n		</tr>\r\n		<tr>\r\n			<td>&gt;&gt; Binary Right Shift</td>\r\n			<td>The left operands value is moved right by the number of bits specified by the right operand.</td>\r\n			<td>a &gt;&gt; 2 = 15 (means 0000 1111)</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<h2>Python Logical Operators</h2>\r\n\r\n<p>There are following logical operators supported by Python language. Assume variable a holds 10 and variable b holds 20 then</p>\r\n\r\n<p>[&nbsp;<a href=\"https://www.tutorialspoint.com/python/logical_operators_example.htm\">Show Example</a>&nbsp;]</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Operator</th>\r\n			<th>Description</th>\r\n			<th>Example</th>\r\n		</tr>\r\n		<tr>\r\n			<td>and Logical AND</td>\r\n			<td>If both the operands are true then condition becomes true.</td>\r\n			<td>(a and b) is true.</td>\r\n		</tr>\r\n		<tr>\r\n			<td>or Logical OR</td>\r\n			<td>If any of the two operands are non-zero then condition becomes true.</td>\r\n			<td>(a or b) is true.</td>\r\n		</tr>\r\n		<tr>\r\n			<td>not Logical NOT</td>\r\n			<td>Used to reverse the logical state of its operand.</td>\r\n			<td>Not(a and b) is false.</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>Used to reverse the logical state of its operand.</p>\r\n\r\n<h2>Python Membership Operators</h2>\r\n\r\n<p>Python&rsquo;s membership operators test for membership in a sequence, such as strings, lists, or tuples. There are two membership operators as explained below &minus;</p>\r\n\r\n<p>[&nbsp;<a href=\"https://www.tutorialspoint.com/python/membership_operators_example.htm\">Show Example</a>&nbsp;]</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Operator</th>\r\n			<th>Description</th>\r\n			<th>Example</th>\r\n		</tr>\r\n		<tr>\r\n			<td>in</td>\r\n			<td>Evaluates to true if it finds a variable in the specified sequence and false otherwise.</td>\r\n			<td>x in y, here in results in a 1 if x is a member of sequence y.</td>\r\n		</tr>\r\n		<tr>\r\n			<td>not in</td>\r\n			<td>Evaluates to true if it does not finds a variable in the specified sequence and false otherwise.</td>\r\n			<td>x not in y, here not in results in a 1 if x is not a member of sequence y.</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<h2>Python Identity Operators</h2>\r\n\r\n<p>Identity operators compare the memory locations of two objects. There are two Identity operators explained below &minus;</p>\r\n\r\n<p>[&nbsp;<a href=\"https://www.tutorialspoint.com/python/identity_operators_example.htm\">Show Example</a>&nbsp;]</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Operator</th>\r\n			<th>Description</th>\r\n			<th>Example</th>\r\n		</tr>\r\n		<tr>\r\n			<td>is</td>\r\n			<td>Evaluates to true if the variables on either side of the operator point to the same object and false otherwise.</td>\r\n			<td>x is y, here&nbsp;<strong>is</strong>&nbsp;results in 1 if id(x) equals id(y).</td>\r\n		</tr>\r\n		<tr>\r\n			<td>is not</td>\r\n			<td>Evaluates to false if the variables on either side of the operator point to the same object and true otherwise.</td>\r\n			<td>x is not y, here&nbsp;<strong>is not</strong>&nbsp;results in 1 if id(x) is not equal to id(y).</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<h2>Python Operators Precedence</h2>\r\n\r\n<p>The following table lists all operators from highest precedence to lowest.</p>\r\n\r\n<p>[&nbsp;<a href=\"https://www.tutorialspoint.com/python/operators_precedence_example.htm\">Show Example</a>&nbsp;]</p>\r\n\r\n<table>\r\n	<tbody>\r\n		<tr>\r\n			<th>Sr.No.</th>\r\n			<th>Operator &amp; Description</th>\r\n		</tr>\r\n		<tr>\r\n			<td>1</td>\r\n			<td>\r\n			<p><strong>**</strong></p>\r\n\r\n			<p>Exponentiation (raise to the power)</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>2</td>\r\n			<td>\r\n			<p><strong>~ + -</strong></p>\r\n\r\n			<p>Complement, unary plus and minus (method names for the last two are +@ and -@)</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>3</td>\r\n			<td>\r\n			<p><strong>* / % //</strong></p>\r\n\r\n			<p>Multiply, divide, modulo and floor division</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>4</td>\r\n			<td>\r\n			<p><strong>+ -</strong></p>\r\n\r\n			<p>Addition and subtraction</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>5</td>\r\n			<td>\r\n			<p><strong>&gt;&gt; &lt;&lt;</strong></p>\r\n\r\n			<p>Right and left bitwise shift</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>6</td>\r\n			<td>\r\n			<p><strong>&amp;</strong></p>\r\n\r\n			<p>Bitwise &#39;AND&#39;</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>7</td>\r\n			<td>\r\n			<p><strong>^ |</strong></p>\r\n\r\n			<p>Bitwise exclusive `OR&#39; and regular `OR&#39;</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>8</td>\r\n			<td>\r\n			<p><strong>&lt;= &lt; &gt; &gt;=</strong></p>\r\n\r\n			<p>Comparison operators</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>9</td>\r\n			<td>\r\n			<p><strong>&lt;&gt; == !=</strong></p>\r\n\r\n			<p>Equality operators</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>10</td>\r\n			<td>\r\n			<p><strong>= %= /= //= -= += *= **=</strong></p>\r\n\r\n			<p>Assignment operators</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>11</td>\r\n			<td>\r\n			<p><strong>is is not</strong></p>\r\n\r\n			<p>Identity operators</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>12</td>\r\n			<td>\r\n			<p><strong>in not in</strong></p>\r\n\r\n			<p>Membership operators</p>\r\n			</td>\r\n		</tr>\r\n		<tr>\r\n			<td>13</td>\r\n			<td>\r\n			<p><strong>not or and</strong></p>\r\n\r\n			<p>Logical operators</p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n', 'PYTHON'),
-(51, 'C-Variable', '<p>vavriab;e</p>\r\n', 'C'),
-(52, 'android-variable', '<p>android variables are statically typed</p>\r\n', 'Android'),
-(53, 'java-static', '<p>sdfzf</p>\r\n', 'java'),
+(51, 'C-Variable', '<p>Intro</p>\r\n', 'C'),
 (54, 'CSS Variable', '<p>CSS VAriabel demo.</p>\r\n', 'css'),
 (55, 'CSS style tag', '<p>it is a description</p>\r\n', 'css');
 
@@ -221,7 +212,12 @@ INSERT INTO `login` (`id`, `username`, `password`, `email`) VALUES
 (3, 'admin', '1234', 'admin@jobify.com'),
 (4, 'Rahul', '12345', 'rahul@jobify.com'),
 (5, 'Harsh', '12345', 'harsh@jobify.com'),
-(44, 'Huan', '1234', 'huan@bla.com');
+(44, 'Huan', '1234', 'huan@bla.com'),
+(45, 'Jon Smith', 'blabla', 'jobify@bla.com'),
+(46, 'User', 'bla', 'bla'),
+(47, 'Elon Musk', '4568', 'elon@jobify.com'),
+(48, 'dasda', 'dasda', 'dasda'),
+(49, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -262,9 +258,9 @@ CREATE TABLE `programming_languages` (
 --
 
 INSERT INTO `programming_languages` (`id`, `language_name`, `language_image`, `language_description`) VALUES
-(0, 'Java', 'img_m/JAVA.png', ''),
-(3, 'Android', 'img_m/Android.png', 'its an android course'),
-(9, 'Python', 'img_m/PYTHON.png', '');
+(0, 'Java', '1.png', 'All about learning Java'),
+(1, 'Python', '3.png', 'All about learning Python'),
+(2, 'C++', '2.png', 'All about learning C++');
 
 -- --------------------------------------------------------
 
@@ -314,13 +310,16 @@ CREATE TABLE `question_test` (
 INSERT INTO `question_test` (`id`, `question`, `opt1`, `opt2`, `opt3`, `opt4`, `answer`, `course_id`) VALUES
 (1, 'What does PHP stand for?', 'PHP: Hypertext Preprocessor', 'Private Home Page', 'Personal Hypertext Processor', 'i dont know', 0, 1),
 (2, 'How do you write \"Hello World\" in PHP', ' Document.Write(\"Hello World\")', ' echo \"Hello World\"', '\"Hello World\"', 'i dont know', 1, 1),
-(14, 'what is haddop', 'i dont know', 'whatever ', 'bigdata soluntion', 'bigdata', 2, 9),
-(15, 'The practice of creating objects based on predefined classes is often referred to as..', ' class creation', 'object creation', 'object instantiation', 'class instantiation', 3, 1),
-(19, '', '', '', '', '', 0, 0),
 (20, 'question 1', 'option 1', 'option 2', 'option 3', 'option 4 ', 1, 13),
 (21, '', '', '', '', '', 0, 0),
 (22, 'question 1', 'option 1', 'option 2', 'option 3', 'option 4 ', 1, 14),
-(23, '', '', '', '', '', 0, 0);
+(23, '', '', '', '', '', 0, 0),
+(24, '', '', '', '', '', 0, 0),
+(25, '', '', '', '', '', 0, 0),
+(26, '', '', '', '', '', 0, 0),
+(27, '', '', '', '', '', 0, 0),
+(28, '', '', '', '', '', 0, 0),
+(29, 'Which of the following type of variables have only two possible values either true or false?', 'Integers', 'Doubles', 'Booleans', 'Strings', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -396,19 +395,7 @@ CREATE TABLE `videos` (
 INSERT INTO `videos` (`video_id`, `video_path`, `video_name`, `course_name`, `video_image`) VALUES
 (51, 'https://www.youtube.com/embed/eIrMbAQSU34', 'Java Tutorial for Beginners [2020]', 'Java', '../../uploads/thumbnail/1.png'),
 (52, 'https://www.youtube.com/embed/r59xYe3Vyks?list=PLS1QulWo1RIbfTjQvTdj8Y6yyq4R7g-Al', 'Java Tutorial For Beginners (Step by Step tutorial)', 'Java', '../../uploads/thumbnail/1.png'),
-(54, 'https://www.youtube.com/embed/9vIi56spxo8', 'Java Installation Tutorial', 'Java', '../../uploads/thumbnail/1.png'),
-(56, 'https://www.youtube.com/embed/VEQYRJkoRBY', 'Python video', 'Python', '../../uploads/thumbnail/2.png');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `videos_demo`
---
-
-CREATE TABLE `videos_demo` (
-  `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+(54, 'https://www.youtube.com/embed/9vIi56spxo8', 'Java Installation Tutorial', 'Java', '../../uploads/thumbnail/1.png');
 
 -- --------------------------------------------------------
 
@@ -428,7 +415,8 @@ CREATE TABLE `video_info` (
 --
 
 INSERT INTO `video_info` (`course_id`, `image`, `description`, `course_name`) VALUES
-(20, '../../uploads/thumbnail/1.png', 'Complete Java Tutorial', 'Java');
+(20, '../../uploads/thumbnail/1.png', 'Complete Java Tutorial', 'Java'),
+(24, '../../uploads/thumbnail/3.png', 'Python Video Tutorials', 'Python');
 
 --
 -- Indexes for dumped tables
@@ -513,12 +501,6 @@ ALTER TABLE `videos`
   ADD PRIMARY KEY (`video_id`);
 
 --
--- Indexes for table `videos_demo`
---
-ALTER TABLE `videos_demo`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `video_info`
 --
 ALTER TABLE `video_info`
@@ -538,13 +520,13 @@ ALTER TABLE `answers`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `commentsection`
 --
 ALTER TABLE `commentsection`
-  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=163;
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
 
 --
 -- AUTO_INCREMENT for table `courses`
@@ -562,7 +544,7 @@ ALTER TABLE `faq`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `mytable`
@@ -574,7 +556,7 @@ ALTER TABLE `mytable`
 -- AUTO_INCREMENT for table `programming_languages`
 --
 ALTER TABLE `programming_languages`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `questions`
@@ -586,7 +568,7 @@ ALTER TABLE `questions`
 -- AUTO_INCREMENT for table `question_test`
 --
 ALTER TABLE `question_test`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -607,16 +589,10 @@ ALTER TABLE `videos`
   MODIFY `video_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
--- AUTO_INCREMENT for table `videos_demo`
---
-ALTER TABLE `videos_demo`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
-
---
 -- AUTO_INCREMENT for table `video_info`
 --
 ALTER TABLE `video_info`
-  MODIFY `course_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `course_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

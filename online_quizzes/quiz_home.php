@@ -59,7 +59,6 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
             <a class="dropdown-item" href="../programming/java">Java Tutorials</a>
             <a class="dropdown-item" href="../programming/python/python_home.html">Python Tutorials</a>
             <a class="dropdown-item" href="../video_tutorials/java/display_video_courses.php">Videos Tutorials</a>
-            <div class="dropdown-divider"></div>
           </div>
         </li>
         <!-- <li class="nav-item">
@@ -86,9 +85,9 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
       <li class="nav-item">
         <a class="nav-link active " data-toggle="tab" href="#menu1">Home</a>
       </li>
-       <li class="nav-item">
+      <li class="nav-item">
         <a class="nav-link " href="#menu2" data-toggle="tab">Profile</a>
-       </li>
+      </li>
       <li class="nav-item li1">
         <a href="../logout.php" id="our-location" class="nav-link justify-content-end">Logout</a>
         <!-- <a class="nav-link justify-content-end" href="#menu3" data-toggle="tab">Logout</a> -->
@@ -116,60 +115,27 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
                   <select class="form-control" id="exampleFormControlSelect1" name="selected_course">
 
                     <?php
-                    $profile->show_courses();                                 //calling show_courses() method of users class
+                    $profile->show_courses();                                 // calling show_courses function from profile class
                     foreach ($profile->cat_data as $key => $course) {
 
-                      ?>
-                        <option value="<?php echo $course['id']; ?>"><?php echo $course['cat_name']; ?></option> <!-- displaying course name in dropdown -->
-                      <?php
+                    ?>
+                      <option value="<?php echo $course['id']; ?>"><?php echo $course['cat_name']; ?></option>
+                    <?php
                     }
 
                     ?>
                   </select>
-                  <button type="submit" class="btn btn-success mt-3">Start Quiz</button>
+                  <button type="submit" class="btn btn-danger mt-3">Start Quiz</button>
                 </form>
               </div>
             </div>
           </div>
         </center>
 
-        <!-- dropdown list ends -->
-
 
       </div>
-      <div class="tab-pane fade" id="menu2">
-        <!-- show profile tab start -->
 
-        <table class="table table-striped">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">ID</th>
-              <th scope="col">Name</th>
-              <th scope="col">Email</th>
-              <th scope="col">Image</th>
-            </tr>
-          </thead>
-          <tbody>
-
-            <?php
-
-            foreach ($profile->data as $key => $prof) {
-
-            ?>
-              <tr>
-                <th scope="row"><?php echo $prof['id']; ?></th>
-                <td><?php echo $prof['name']; ?></td>
-                <td><?php echo $prof['email']; ?></td>
-                <td><img src="img/<?php echo $prof['img']; ?>" class="img-fluid" width="35px" height="30px"></td>
-              </tr>
-
-          </tbody>
-        <?php } ?>
-        </table>
-
-
-      </div>
-      <div class="tab-pane fade" id="menu3">this is menu 3</div>
+      <!--  -->
 
 
     </div>

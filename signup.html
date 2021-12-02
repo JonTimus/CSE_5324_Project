@@ -82,16 +82,20 @@
 						<form method="POST" action="registration.php">
 							<div class="form-group">
 								<label><i class="fa fa-user fa-2x"></i>&nbspUsername*</label>
-								<input type="text" name="name" class="form-control" required>
+								<input type="text" pattern"^[A-Za-z][A-Za-z0-9_]{3,14}$" name="name"
+									class="form-control" required>
 
 								<label><i class="fa fa-lock fa-2x"></i>&nbspPassword*</label>
-								<input type="text" name="password" class="form-control" id="pwd" required>
+								<input type="text" pattern="^[A-Za-z][A-Za-z0-9_]{3,14}$" name="password"
+									class="form-control" id="pwd" required>
 
 								<label><i class="fa fa-key fa-2x"></i>Confirm Password*</label>
-								<input type="text" name="confirm_password" class="form-control" id="cpwd" required>
+								<input type="text" pattern="^[A-Za-z][A-Za-z0-9_]{3,14}$" name="confirm_password"
+									class="form-control" id="cpwd" required>
 
 								<label><i class="fa fa-envelope fa-2x"></i>&nbspEmail*</label>
-								<input type="text" name="email" class="form-control" required>
+								<input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+									class="form-control" required>
 								<div id="errorlabel"></div>
 								<button id="btn-login" type="submit">sign up</a></button>
 							</div>
@@ -107,8 +111,6 @@
 					</div>
 
 				</div>
-
-				<!-- <button id="btn-signup"><a id="sign" href="index.php">Sign up</a></button> -->
 			</div>
 		</div>
 	</section>
@@ -121,6 +123,7 @@
 	<script type="text/javascript">
 
 		$(document).ready(function () {
+
 
 			$('#cpwd').keyup(function () {
 				var pwd = $('#pwd').val();

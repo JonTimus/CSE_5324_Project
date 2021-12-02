@@ -168,7 +168,7 @@ if (!isset($_SESSION['username'])) {
 				<ul class="nav navbar-nav navbar-right">
 					<li> <a href="#">Home</a></li>
 					<li> <a href="#myservice_section">Our Service</a></li>
-					<li> <a href="#work">Learn</a></li>
+					<!-- <li> <a href="#work">Learn</a></li> -->
 					<li> <a href="#our-members">Our Team</a></li>
 					<li> <a href="#myfaq">FAQs</a></li>
 					<li> <a href="#conus">Contact us</a></li>
@@ -233,8 +233,8 @@ if (!isset($_SESSION['username'])) {
 						<span class="signinwith">Sign in With <br> Social Networks</span>
 
 						<button class="social facebook">Log in with Facebook</button>
-						<button class="social twitter">Log in with twitter</button>
-						<button class="social google">Log in with gmail</button>
+						<button class="social twitter">Log in with Twitter</button>
+						<button class="social google">Log in with Gmail</button>
 					</div>
 
 				</div>
@@ -313,11 +313,10 @@ if (!isset($_SESSION['username'])) {
 		</div>
 	</div>
 
-	<section class="work" id="work"><br>
+	<!---- <section class="work" id="work"><br>
 		<h2 id="work-heading" class="text-center" style="font-weight: bold;">Programming Tutorials & Quizzes</h2>
 		<p class="text-center">Learn & Practice</p>
 		<div class="container-fluid">
-			<!---first row start-->
 			<div class="row no-gutters">
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="img-wrapper">
@@ -360,12 +359,6 @@ if (!isset($_SESSION['username'])) {
 				</div>
 
 
-
-				<!---first row ends-->
-
-
-				<!-------second row starts  --->
-
 				<div class="col-md-3 col-sm-3 col-xs-3">
 					<div class="img-wrapper">
 						<a href="./img_m/work5.png" title="Tutorials Photo">
@@ -406,15 +399,10 @@ if (!isset($_SESSION['username'])) {
 
 				</div>
 
-
-
-				<!---second row ends-->
-
 			</div>
 
-
-
-	</section>
+	</section> 
+	-- >
 
 
 
@@ -436,12 +424,12 @@ if (!isset($_SESSION['username'])) {
 					<div class="team-member text-center">
 						<img src="img_m/me_spacex2.jpg" style="height: 350px;width: 290px;" class="img-responsive">
 						<div class="team-member-info text-center">
-							<h4 class="team-member-name">Akhmadjon - Jon <br/>Muslimov - Timus</h4>
+							<h4 class="team-member-name">Akhmadjon - Jon <br />Muslimov - Timus</h4>
 							<h4 class="team-member-designation">Team Lead & Developer</h4>
 							<ul class="social-list">
-								<li><a href="" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="" class="social-icon icon-gray"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="https://facebook.com" class="social-icon icon-gray"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://twitter.com" class="social-icon icon-gray"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://instagram.com" class="social-icon icon-gray"><i class="fa fa-instagram"></i></a></li>
 							</ul>
 						</div>
 					</div>

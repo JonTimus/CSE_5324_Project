@@ -1,0 +1,24 @@
+h1.headt{
+	font-size: 25px;
+	font-weight: bold;
+	color: #666;
+	text-align: center;
+}
+.yvideo-box{
+	width: 280px;
+	height: 220px;
+	float:left;
+	padding: 10px;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 10px;
+}
+.yvideo-box h4{
+	font-size: 15px;
+	margin-top: 5px;
+    font-weight: bold;
+}
+.error{
+	font-size: 16px;
+	color: #ea4436;
+}

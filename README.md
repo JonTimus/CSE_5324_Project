@@ -15,11 +15,14 @@ Essential parts of this project are:
 
 ### Step 1:
 
-- Download the project from github
+- Download or Clone the project from Github
 
 ### Step 2:
 
-- Download latest version of Xampp
+- Configure Xampp & MySQL
+
+  - You can also use the following link to download the latest version of Xampp: https://www.apachefriends.org/en/xampp-windows.html
+  - You can also use the following link to download the latest version of MySQL: https://www.mysql.com/downloads/mysql/
 
 ### Step 3:
 
@@ -35,4 +38,6 @@ Essential parts of this project are:
 - Put the project folder in the root of the Xampp (e.g. C:\xampp\htdocs\CSE_5324_Project)
 - Open the project in the browser (using localhost)
 
-## Deployment
+## Deployment to online server
+
+- 

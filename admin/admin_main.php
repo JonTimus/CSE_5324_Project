@@ -118,7 +118,7 @@ $userd = $admin->show_users();
 
           <img class="myimg" src="../uploads/file3.png" alt="Card" width="288" height="200">
           <div class="card-body">
-            <p class="card-text"><a href="#" style="text-decoration: none; color: orangered">ALL COURSES <i class="fa fa-bookmark ml-3" style="color: orangered"></i></a></p>
+            <p class="card-text"><a href="./manage_courses/manage_courses.php" style="text-decoration: none; color: orangered">ALL COURSES <i class="fa fa-bookmark ml-3" style="color: orangered"></i></a></p>
           </div>
         </div>
 

@@ -106,7 +106,7 @@ session_start();
 
 								<label><i class="fa fa-lock fa-2x"></i> Password</label>
 								<input type="password" autocomplete="off" name="password" class="form-control" id="password">
-							<br/>
+								<br />
 								<span id="perror"><?php
 													if (isset($_SESSION['error'])) {
 														echo "Error: Try Again<br/>";

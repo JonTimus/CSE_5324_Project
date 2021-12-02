@@ -7,11 +7,6 @@
 if (!isset($_SESSION['username'])) {
 	header('location:../../login.php');	
 }
-//  date_default_timezone_set('');
- // echo date_default_timezone_get();
-
-
-
 
  ?>
 
@@ -89,7 +84,7 @@ if (!isset($_SESSION['username'])) {
 	
 			<!---Navigation Start	----->
 <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
-  <a class="navbar-brand text-white" href="#">Jobify</a>
+  <a class="navbar-brand text-white" href="../../index.php">Jobify</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -97,7 +92,7 @@ if (!isset($_SESSION['username'])) {
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto ">
       <li class="nav-item active">
-        <a class="nav-link text-white" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link text-white" href="./display_video_list.php?course_name=Java">Home <span class="sr-only">(current)</span></a>
       </li>
      <!--  <li class="nav-item">
         <a class="nav-link text-white" href="#">Link</a>
@@ -123,21 +118,6 @@ if (!isset($_SESSION['username'])) {
     </form>
   </div>
 </nav>
-
-
-	<!---Navigation Ends	----->
-
-
-
-
-
-
-
-
-
-
-
-		<!---Video iframe Start	----->
 
 <br>
 <div class="container-fluid">
