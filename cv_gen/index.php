@@ -116,11 +116,11 @@ session_start();
                     <div class="mb-3 d-flex justify-content-between">
                         <div>
                             <label for="exampleInputEmail1" class="form-label">From</label>
-                            <input type="text" name="from1" pattern="[0-9][0-9]" class="form-control">
+                            <input type="text" name="from1" pattern="[0-9][0-9][0-9][0-9]" class="form-control">
                         </div>
                         <div>
                             <label for="exampleInputEmail1" class="form-label">To</label>
-                            <input type="text" name="to1" pattern="[0-9][0-9]" class="form-control">
+                            <input type="text" name="to1" pattern="[0-9][0-9][0-9][0-9]" class="form-control">
                         </div>
                     </div>
                     <div class="mb-3">
