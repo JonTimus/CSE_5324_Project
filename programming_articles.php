@@ -89,16 +89,17 @@ session_start();
 
 
 
-		.div1
+		.div1 {
+			width: 100%;
+			height: 100%;
+			background-color: #f2f2f2;
+			padding: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			border-radius: 10px;
+		}
 
 		/* for title image*/
-			{
-			margin-top: 10%;
-			position: relative;
-			height: 500px;
-			width: 1263px;
-			background: url('./img_m/sky.jpg');
-		}
 	</style>
 
 
@@ -220,9 +221,9 @@ session_start();
 		<div class="container">
 			<div class="row row-30">
 				<div class="col-md-4 col-xl-5">
-					<br/>
-					<div class="pr-xl-4"><a class="brand" href="index.php"><img class="brand-logo-light" src="img_m/jobify.png" alt="Jobify" width="140" height="37" srcset="img_m/jobify.png 4x"></a>
-						<p><br/>Jobify is an awesome learning & practicing platform, focused on deliviring excelent open-source content and coressponding practise questions.</p>
+					<br />
+					<div class="pr-xl-4"><a class="brand" href="./index.php"><img class="brand-logo-light" src="img_m/jobify.png" alt="Jobify" width="140" height="37" srcset="img_m/jobify.png 4x"></a>
+						<p><br />Jobify is an awesome learning & practicing platform, focused on deliviring excelent open-source content and coressponding practise questions.</p>
 					</div>
 				</div>
 				<!-- <div class="col-md-4 col-xl-3">

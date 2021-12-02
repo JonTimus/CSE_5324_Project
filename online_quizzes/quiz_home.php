@@ -29,10 +29,23 @@ $profile->show_users_profile($_SESSION['username']);  //calling the show_users p
   .li1 {
     float: right !important;
   }
+
+  /* add background image with image 80% transperancy */
+  body {
+    background-image: url('../uploads/quiz1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #cccccc;
+    background-blend-mode: overlay;
+    /* background-opacity: 0.8; */
+  }
 </style>
 
 
-<body style="">
+
+<body class='opaque-bg'>
 
   <!-- ========================================================================================================================== -->
 

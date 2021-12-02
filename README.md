@@ -40,4 +40,4 @@ Essential parts of this project are:
 
 ## Deployment to online server
 
-- 
+- We will deploy the project to the online server in future.
